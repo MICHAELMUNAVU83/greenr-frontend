@@ -46,31 +46,31 @@ function SignUp({ setStoredToken }) {
       <form>
         <label>
           Username:
-          <input
+        </label>
+        <input
             type="text"
             name="name"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
           />
-        </label>
         <label>
           Email:
-          <input
+        </label>
+        <input
             type="text"
             name="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
-        </label>
         <label>
           Password:
-          <input
+        </label>
+        <input
             type="text"
             name="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-        </label>
         <label>
           Select a role:
           <select value={role} onChange={(e) => setRole(e.target.value)}>
