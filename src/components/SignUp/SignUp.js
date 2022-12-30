@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import "./SignUp.css";
 function SignUp({ setStoredToken }) {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
@@ -34,47 +35,56 @@ function SignUp({ setStoredToken }) {
     setPassword("");
   };
   return (
-    <div className="App">
-      <h1>Create new user</h1>
+    <div className="app">
+      <div className="form">
+     <aside>
+      <p>Already have an account?</p>
+      <Link to="/login" className="linktag">Login</Link>
+      </aside> 
+      <h2>Welcome</h2>
+      <p>Fill in details to create a Greenr Account</p>
       <form>
         <label>
           Username:
-          <input
+        </label>
+        <input
             type="text"
             name="name"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
+            placeholder="Username"
           />
-        </label>
         <label>
           Email:
-          <input
+        </label>
+        <input
             type="text"
             name="email"
             value={email}
+            placeholder="Email"
             onChange={(e) => setEmail(e.target.value)}
           />
-        </label>
         <label>
           Password:
-          <input
+        </label>
+        <input
             type="text"
             name="password"
             value={password}
+            placeholder="Password"
             onChange={(e) => setPassword(e.target.value)}
           />
-        </label>
         <label>
           Select a role:
+          </label>
           <select value={role} onChange={(e) => setRole(e.target.value)}>
             <option value="buyer">Buyer</option>
             <option value="seller">Seller</option>
           </select>
-        </label>
+        
         <button onClick={handleSubmit}>Submit</button>
       </form>
-      <p>Already have an account?</p>
-      <Link to="/login">Login</Link>
+      </div>
     </div>
   );
 }

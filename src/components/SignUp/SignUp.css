@@ -1,0 +1,45 @@
+.app{
+   margin: 8% 0px;
+}
+.form{
+   margin: auto;
+   width: 40%;
+   padding: 2%;
+   border: 1px solid rgb(209, 207, 207);
+}
+
+aside{
+    display: flex;
+    justify-content: right;
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+aside p{
+    color: rgb(209, 207, 207);
+    font-size: 22px;
+}
+p{
+    font-size: 24px;
+}
+.linktag{
+    text-decoration: none;
+}
+label{
+    margin: 1% 0;
+}
+select{
+    margin-left: 10%;
+}
+button{
+    width: 100%;
+    background-color: green;
+    border:none;
+    padding: 5px 0px;
+    color: rgb(229, 229, 229);
+    margin-top: 5%;
+}
+input{
+    border: 2px solid rgb(209, 207, 207);
+    border-radius: 5px;
+    width: 100%;
+}
