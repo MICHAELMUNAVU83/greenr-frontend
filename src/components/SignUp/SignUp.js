@@ -73,11 +73,12 @@ function SignUp({ setStoredToken }) {
           />
         <label>
           Select a role:
+          </label>
           <select value={role} onChange={(e) => setRole(e.target.value)}>
             <option value="buyer">Buyer</option>
             <option value="seller">Seller</option>
           </select>
-        </label>
+        
         <button onClick={handleSubmit}>Submit</button>
       </form>
       </div>

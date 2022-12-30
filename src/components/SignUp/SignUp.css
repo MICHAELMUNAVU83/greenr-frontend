@@ -1,5 +1,5 @@
 .app{
-    
+   
 }
 .form{
    margin: auto;
@@ -12,20 +12,23 @@ aside{
     display: flex;
     justify-content: right;
     margin-bottom: 20px;
-    font-size: 10px;
+    font-size: 22px;
 }
 aside p{
     color: rgb(209, 207, 207);
+    font-size: 22px;
 }
 p{
-    font-size: 11px; 
+    font-size: 24px;
 }
 .linktag{
     text-decoration: none;
 }
 label{
-    margin:5px 0;
-    
+    margin: 1% 0;
+}
+select{
+    margin-left: 20px;
 }
 button{
     width: 100%;
@@ -33,6 +36,7 @@ button{
     border:none;
     padding: 5px 0px;
     color: rgb(229, 229, 229);
+    margin: 3% 0;
 }
 input{
     border: 2px solid rgb(209, 207, 207);
