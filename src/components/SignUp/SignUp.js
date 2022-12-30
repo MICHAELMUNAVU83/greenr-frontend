@@ -4,6 +4,7 @@ function SignUp({ setStoredToken }) {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [role, setRole] = useState("");
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -62,6 +63,13 @@ function SignUp({ setStoredToken }) {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
+        </label>
+        <label>
+          Select a role:
+          <select value={role} onChange={(e) => setRole(e.target.value)}>
+            <option value="buyer">Buyer</option>
+            <option value="seller">Seller</option>
+          </select>
         </label>
         <button onClick={handleSubmit}>Submit</button>
       </form>
