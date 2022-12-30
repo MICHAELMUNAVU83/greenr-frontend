@@ -7,3 +7,25 @@
    padding: 2%;
    border: 1px solid rgb(209, 207, 207);
 }
+aside{
+    display: flex;
+    justify-content: right;
+    margin-bottom: 20px;
+    font-size: 10px;
+}
+aside p{
+    color: rgb(209, 207, 207);
+}
+p{
+    font-size: 11px; 
+}
+.linktag{
+    text-decoration: none;
+}
+label{
+    margin:5px 0;
+}
+input{
+    border: 2px solid rgb(209, 207, 207);
+    border-radius: 5px;
+}

@@ -37,12 +37,12 @@ function SignUp({ setStoredToken }) {
   return (
     <div className="app">
       <div className="form">
+     <aside>
       <p>Already have an account?</p>
-      <Link to="/login">Login</Link>
-      <>
-      <h1>Welcome</h1>
+      <Link to="/login" className="linktag">Login</Link>
+      </aside> 
+      <b>Welcome</b>
       <p>Fill in details to create a Greenr Account</p>
-      </>
       <form>
         <label>
           Username:
