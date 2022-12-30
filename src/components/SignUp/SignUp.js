@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import "./SignUp.css";
 function SignUp({ setStoredToken }) {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
@@ -34,8 +35,14 @@ function SignUp({ setStoredToken }) {
     setPassword("");
   };
   return (
-    <div className="App">
-      <h1>Create new user</h1>
+    <div className="app">
+      <div className="form">
+      <p>Already have an account?</p>
+      <Link to="/login">Login</Link>
+      <>
+      <h1>Welcome</h1>
+      <p>Fill in details to create a Greenr Account</p>
+      </>
       <form>
         <label>
           Username:
@@ -73,8 +80,7 @@ function SignUp({ setStoredToken }) {
         </label>
         <button onClick={handleSubmit}>Submit</button>
       </form>
-      <p>Already have an account?</p>
-      <Link to="/login">Login</Link>
+      </div>
     </div>
   );
 }
