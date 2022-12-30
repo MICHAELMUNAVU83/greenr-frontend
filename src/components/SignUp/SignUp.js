@@ -41,7 +41,7 @@ function SignUp({ setStoredToken }) {
       <p>Already have an account?</p>
       <Link to="/login" className="linktag">Login</Link>
       </aside> 
-      <b>Welcome</b>
+      <h2>Welcome</h2>
       <p>Fill in details to create a Greenr Account</p>
       <form>
         <label>
@@ -52,6 +52,7 @@ function SignUp({ setStoredToken }) {
             name="name"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
+            placeholder="Username"
           />
         <label>
           Email:
@@ -60,6 +61,7 @@ function SignUp({ setStoredToken }) {
             type="text"
             name="email"
             value={email}
+            placeholder="Email"
             onChange={(e) => setEmail(e.target.value)}
           />
         <label>
@@ -69,6 +71,7 @@ function SignUp({ setStoredToken }) {
             type="text"
             name="password"
             value={password}
+            placeholder="Password"
             onChange={(e) => setPassword(e.target.value)}
           />
         <label>
