@@ -35,20 +35,21 @@ function SignUp({ setStoredToken }) {
     setPassword("");
   };
   return (
-    <div className="app">
-      <div className="form">
+    <div className="signup-app">
+      <div className="signup-form">
      <aside>
       <p>Already have an account?</p>
       <Link to="/login" className="linktag">Login</Link>
       </aside> 
       <h2>Welcome</h2>
-      <p>Fill in details to create a Greenr Account</p>
+      <p className="signup-p">Fill in details to create a Greenr Account</p>
       <form>
         <label>
           Username:
         </label>
         <input
             type="text"
+            className="form-control signup-input"
             name="name"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
@@ -59,6 +60,7 @@ function SignUp({ setStoredToken }) {
         </label>
         <input
             type="text"
+            className="form-control signup-input"
             name="email"
             value={email}
             placeholder="Email"
@@ -69,6 +71,7 @@ function SignUp({ setStoredToken }) {
         </label>
         <input
             type="text"
+            className="form-control signup-input"
             name="password"
             value={password}
             placeholder="Password"
@@ -77,12 +80,12 @@ function SignUp({ setStoredToken }) {
         <label>
           Select a role:
           </label>
-          <select value={role} onChange={(e) => setRole(e.target.value)}>
+          <select value={role} onChange={(e) => setRole(e.target.value)} className="form-select">
             <option value="buyer">Buyer</option>
             <option value="seller">Seller</option>
           </select>
         
-        <button onClick={handleSubmit}>Submit</button>
+        <button className="signup-button" onClick={handleSubmit}>Submit</button>
       </form>
       </div>
     </div>
