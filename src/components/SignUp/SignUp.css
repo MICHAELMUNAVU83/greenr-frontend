@@ -1,0 +1,37 @@
+.signup-app {
+  margin: 8% 0px;
+}
+.signup-form {
+  margin: auto;
+  width: 40%;
+  padding: 2%;
+  border: 1px solid rgb(209, 207, 207);
+}
+
+aside {
+  display: flex;
+  justify-content: right;
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+aside p {
+  color: rgb(209, 207, 207);
+  font-size: 22px;
+}
+.signup-p {
+  font-size: 24px;
+}
+.linktag {
+  text-decoration: none;
+}
+
+
+.signup-button {
+  width: 100%;
+  background-color: green;
+  border: none;
+  padding: 5px 0px;
+  border-radius: 5px;
+  color: rgb(229, 229, 229);
+  margin-top: 5%;
+}
