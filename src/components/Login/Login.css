@@ -40,3 +40,13 @@
     font-weight: 600;
     color: rgb(34, 34, 34);
   }
+
+  .login-button{
+    width: 100%;
+    background-color: green;
+    border: none;
+    padding: 5px 0px;
+    border-radius: 5px;
+    color: rgb(229, 229, 229);
+    margin-top: 5%;
+  }

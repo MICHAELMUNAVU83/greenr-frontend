@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import './Login.css'
-import "bootstrap/dist/css/bootstrap.min.css"
-
+import "./Login.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Link } from "react-router-dom";
 function Login({ setStoredToken }) {
   const [username, setUsername] = useState("");
   const navigate = useNavigate();
@@ -51,7 +51,7 @@ function Login({ setStoredToken }) {
               className="form-control mt-1"
               placeholder="Enter email"
               value={username}
-            onChange={(e) => setUsername(e.target.value)}
+              onChange={(e) => setUsername(e.target.value)}
             />
           </div>
           <div className="form-group mt-3">
@@ -65,14 +65,19 @@ function Login({ setStoredToken }) {
             />
           </div>
           <div className="d-grid gap-2 mt-3">
-            <button type="submit"
-             className="btn btn-success"
-             onClick={handleSubmit}>
+            <button
+              type="submit"
+              className="login-button"
+              onClick={handleSubmit}
+            >
               Submit
             </button>
           </div>
           <p className="forgot-password text-right mt-2">
-            <a href="#"> Forgot Password?</a>
+            <small>Not yet a member?</small>
+            <Link to="/signup" className="linktag mx-2">
+              Sign Up
+            </Link>
           </p>
         </div>
       </form>
