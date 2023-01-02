@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./SignUp.css";
+import {useNavigate} from "react-router-dom"
+
 function SignUp({ setStoredToken }) {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
@@ -33,6 +35,10 @@ function SignUp({ setStoredToken }) {
     setUsername("");
     setEmail("");
     setPassword("");
+    
+   setTimeout(()=>{
+    useNavigate("/");
+    },2000)
   };
   return (
     <div className="signup-app">
