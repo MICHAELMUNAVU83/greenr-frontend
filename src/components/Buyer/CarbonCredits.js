@@ -17,6 +17,7 @@ useEffect(() => {
   <div className="gridcard"> 
     <CarbonCredit content={carbonCard}/>
   </div>
+  <button className="moreOpt">See more</button>
   </>)
 }
 
