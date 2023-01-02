@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import './Login.css'
 import "bootstrap/dist/css/bootstrap.min.css"
 import { MdOutlineMail } from "react-icons/md"
-import {BiLockAlt} from "react-icons/bi"
+import {BiLockAlt,BiCheckbox} from "react-icons/bi"
 
 function Login({ setStoredToken }) {
   const [username, setUsername] = useState("");
@@ -49,7 +49,7 @@ function Login({ setStoredToken }) {
           <p className="Login-form-paragraph">Login to continue</p>
           <div className="form-group mt-3">
             <label className="label">Email </label>
-            <MdOutlineMail />
+            <MdOutlineMail className="mail"/>
             <input
               type="email"
               className="form-control mt-1"
@@ -58,7 +58,7 @@ function Login({ setStoredToken }) {
             onChange={(e) => setUsername(e.target.value)}
             />
           </div>
-          <BiLockAlt />
+          <BiLockAlt className="lock"/>
           <div className="form-group mt-3">
             <label className="label">Password</label>
             <input
@@ -70,7 +70,7 @@ function Login({ setStoredToken }) {
             />
           </div>
           <p className="remember me text-right mt-2">
-            <a href="#" text-decoration> Remember me</a>
+           <BiCheckbox /> Remember me
           </p>
           <p className="forgot-password text-right mt-2">
             <a href="#" text-decoration> Forgot Password?</a>

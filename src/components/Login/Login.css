@@ -47,11 +47,26 @@
     font-weight: 300;
   }
 
-  a:link {
-    color:#4F98CB;
+   a:link {
     text-decoration: none;
   }
   a:hover {
     color:#4F98CB;
+  } 
+
+  .forgot-password{
+    font-family: 'Poppins';
+ font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+
+/* identical to box height */
+
+text-align: right;
+
+/* Main/Primary */
+
+color: #3665C5;
+
   }
- 
