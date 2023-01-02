@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import SignUp from "./components/SignUp/SignUp";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Hello from "./Hello";
 import Login from "./components/Login/Login";
 import Home from "./Pages/Home";
 import SplashScreen from "./Pages/SplashScreen";
+import CarbonCredits from "./components/Buyer/CarbonCredits";
 
 function App() {
   const [storedToken, setStoredToken] = useState(localStorage.getItem("token"));
@@ -27,11 +27,11 @@ function App() {
       {storedToken ? (
         <Router>
           <Routes>
-            <Route path="/" element={<Home setStoredToken={setStoredToken} />} />
             <Route
-              path="/hello"
-              element={<Hello setStoredToken={setStoredToken} name={name} />}
+              path="/"
+              element={<Home setStoredToken={setStoredToken} />}
             />
+            <Route path="/carboncredits" element={<CarbonCredits />} />
           </Routes>
         </Router>
       ) : (
