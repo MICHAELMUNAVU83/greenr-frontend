@@ -22,29 +22,40 @@
   }
   
   .Login-form-title {
-    text-align: center;
     margin-bottom: 1em;
     font-size: 24px;
     color: rgb(34, 34, 34);
     font-weight: 800;
+    position: absolute;
+    top:130px;
+    line-height: 25px;
+    font-family: 'Poppins';
+    left:477px;
   }
   .Login-form-paragraph {
     text-align: center;
     font-size: 16px;
     color: rgb(34, 34, 34);
     font-weight: 3000;
+    position: absolute;
+    top:150px;
+    font-family: 'Poppins';
+    font-style: normal;
   }
   
   label {
     font-size: 14px;
-    font-weight: 500;
     color: rgb(34, 34, 34);
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
   }
   .Login-form-parag {
-    text-align: center;
+    text-align: end;
     font-size: 16px;
-    color: rgb(34, 34, 34);
+    color: #BDBDBD;
     font-weight: 300;
+    height: 110px;
   }
 
    a:link {
@@ -54,19 +65,26 @@
     color:#4F98CB;
   } 
 
-  .forgot-password{
+  .forgot-password {
     font-family: 'Poppins';
- font-style: normal;
-font-weight: 400;
-font-size: 16px;
-line-height: 24px;
-
-/* identical to box height */
-
-text-align: right;
-
-/* Main/Primary */
-
-color: #3665C5;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: right;
+    color: #3665C5;
+    line-height: 0px;
+    text-align: right;
 
   }
+
+  .mail {
+    position: absolute;
+    height:95px;
+    left:482px;
+  }
+
+  .lock{
+    position: absolute;
+    height:126px;
+  }
+  
