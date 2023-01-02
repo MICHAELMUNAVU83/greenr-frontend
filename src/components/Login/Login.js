@@ -70,12 +70,12 @@ function Login({ setStoredToken }) {
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-          <p className="remember me text-right mt-2">
+          {/* <p className="remember me text-right mt-2">
            <BiCheckbox /> Remember me
           </p>
           <p className="forgot-password text-right mt-2">
             <a href="#" text-decoration> Forgot Password?</a>
-          </p>
+          </p> */}
           <div className="d-grid gap-2 mt-3">
             <button type="submit"
              className="btn btn-success"
