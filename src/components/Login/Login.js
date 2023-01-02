@@ -2,6 +2,8 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import './Login.css'
 import "bootstrap/dist/css/bootstrap.min.css"
+import { MdOutlineMail } from "react-icons/md"
+import {BiLockAlt} from "react-icons/bi"
 
 function Login({ setStoredToken }) {
   const [username, setUsername] = useState("");
@@ -47,20 +49,22 @@ function Login({ setStoredToken }) {
           <p className="Login-form-paragraph">Login to continue</p>
           <div className="form-group mt-3">
             <label className="label">Email </label>
+            <MdOutlineMail />
             <input
               type="email"
               className="form-control mt-1"
-              placeholder="Enter email"
+              placeholder= " Your email"
               value={username}
             onChange={(e) => setUsername(e.target.value)}
             />
           </div>
+          <BiLockAlt />
           <div className="form-group mt-3">
             <label className="label">Password</label>
             <input
               type="password"
               className="form-control mt-1"
-              placeholder="Enter password"
+              placeholder="Your password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
