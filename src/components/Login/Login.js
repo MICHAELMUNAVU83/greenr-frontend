@@ -44,7 +44,7 @@ function Login({ setStoredToken }) {
     <div className="Login-form-container">
       <form className="Login-form">
         <div className="Login-form-content">
-          <p className="Login-form-parag">Dont have an account?<a href='signup'>SignUp</a></p>
+          <p className="Login-form-parag">Dont have an account?<a href='signup'>Signup</a></p>
           <h3 className="Login-form-title">Welcome</h3>
           <p className="Login-form-paragraph">Login to continue</p>
           <div className="form-group mt-3">
