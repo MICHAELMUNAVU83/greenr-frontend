@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import './Login.css'
+import "bootstrap/dist/css/bootstrap.min.css"
 
 function Login({ setStoredToken }) {
   const [username, setUsername] = useState("");
@@ -37,29 +39,42 @@ function Login({ setStoredToken }) {
     setPassword("");
   };
   return (
-    <div className="App">
-      <h1>Create new user</h1>
-      <form>
-        <label>
-          Username:
-          <input
-            type="text"
-            name="name"
-            value={username}
+    <div className="Login-form-container">
+      <form className="Login-form">
+        <div className="Login-form-content">
+          <h3 className="Login-form-title">Welcome</h3>
+          <p className="Login-form-paragraph">Login to continue</p>
+          <div className="form-group mt-3">
+            <label>Email </label>
+            <input
+              type="email"
+              className="form-control mt-1"
+              placeholder="Enter email"
+              value={username}
             onChange={(e) => setUsername(e.target.value)}
-          />
-        </label>
-
-        <label>
-          Password:
-          <input
-            type="text"
-            name="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </label>
-        <button onClick={handleSubmit}>Submit</button>
+            />
+          </div>
+          <div className="form-group mt-3">
+            <label>Password</label>
+            <input
+              type="password"
+              className="form-control mt-1"
+              placeholder="Enter password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </div>
+          <div className="d-grid gap-2 mt-3">
+            <button type="submit"
+             className="btn btn-success"
+             onClick={handleSubmit}>
+              Submit
+            </button>
+          </div>
+          <p className="forgot-password text-right mt-2">
+            <a href="#"> Forgot Password?</a>
+          </p>
+        </div>
       </form>
     </div>
   );
