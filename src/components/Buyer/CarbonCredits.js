@@ -17,7 +17,8 @@ useEffect(() => {
   <div className="gridcard"> 
     <CarbonCredit content={carbonCard}/>
   </div>
-  <button className="moreOpt">See more</button>
+  <div className="d-flex justify-content-center"> <button className="btn btn-outline-success text-center"> Buy Carbon Credits </button> 
+  </div>
   </>)
 }
 
