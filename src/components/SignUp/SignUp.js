@@ -1,11 +1,14 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./SignUp.css";
+import {useNavigate} from "react-router-dom"
+
 function SignUp({ setStoredToken }) {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [role, setRole] = useState("");
+  const navigate = useNavigate("/");
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -33,6 +36,10 @@ function SignUp({ setStoredToken }) {
     setUsername("");
     setEmail("");
     setPassword("");
+    
+   setTimeout(()=>{
+   navigate("/")
+    },2000)
   };
   return (
     <div className="signup-app">
