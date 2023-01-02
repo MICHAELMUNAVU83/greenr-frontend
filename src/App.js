@@ -6,6 +6,7 @@ import Home from "./Pages/Home";
 import SplashScreen from "./Pages/SplashScreen";
 import CarbonCredits from "./components/Buyer/CarbonCredits";
 import Navbar from "./components/NavBar/Navbar";
+import EachCarbonCredit from "./components/Buyer/EachCarbonCredit";
 
 function App() {
   const [storedToken, setStoredToken] = useState(localStorage.getItem("token"));
@@ -34,6 +35,8 @@ function App() {
               element={<Home setStoredToken={setStoredToken} />}
             />
             <Route path="/carboncredits" element={<CarbonCredits />} />
+            <Route path="/carboncredits/:id" element={<EachCarbonCredit />} />
+
           </Routes>
         </Router>
       ) : (
