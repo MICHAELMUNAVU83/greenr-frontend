@@ -23,7 +23,7 @@
 
 
 
-label {
+.login-label {
   font-size: 14px;
   color: rgb(34, 34, 34);
   font-family: "Poppins";
@@ -54,4 +54,16 @@ a:hover {
   color: #3665c5;
   line-height: 0px;
   text-align: right;
+}
+
+.mail {
+  position: absolute;
+  height:95px;
+  left:482px;
+}
+
+.lock{
+  position: absolute;
+  height:92px;
+  left:480px;
 }

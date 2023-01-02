@@ -48,7 +48,7 @@ function Login({ setStoredToken }) {
           <h3 className="Login-form-title">Welcome</h3>
           <p className="Login-form-paragraph">Login to continue</p>
           <div className="form-group mt-3">
-            <label className="label">Email </label>
+            <label className="login-label">Email </label>
             <MdOutlineMail className="mail"/>
             <input
               type="email"
@@ -60,7 +60,7 @@ function Login({ setStoredToken }) {
           </div>
           
           <div className="form-group mt-3">
-            <label className="label">Password</label>
+            <label className="login-label">Password</label>
             <BiLockAlt className="lock"/>
             <input
               type="password"
