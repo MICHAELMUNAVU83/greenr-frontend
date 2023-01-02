@@ -1,3 +1,13 @@
 .Card{
     border: 1px solid grey;
 }
+.carbonbg{
+    text-align: center;
+    height: 150px;
+    padding: 2% 0px;
+    color: white;
+    font-size: 45px;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWn7tL4UvtoLhb_K1eTzcxGyGYWGHbNSYYOA&usqp=CAU");    
+    background-size: cover;
+    background-position: center;
+}

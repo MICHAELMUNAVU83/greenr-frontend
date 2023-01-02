@@ -11,12 +11,13 @@ useEffect(() => {
     setCarbonCard(data);
   });
 }, []);
-  return <div>
-    <>
-    About Carbon Projects
-    </>
+  return(
+  <div>
+    <div className="carbonbg">
+      <p>Available Carbon Projects</p>  
+    </div>  
     <CarbonCredit content={carbonCard}/>
-  </div>;
+  </div>)
 }
 
 export default CarbonCredits;
