@@ -46,7 +46,7 @@ function Login({ setStoredToken }) {
           <h3 className="Login-form-title">Welcome</h3>
           <p className="Login-form-paragraph">Login to continue</p>
           <div className="form-group mt-3">
-            <label>Email </label>
+            <label className="label">Email </label>
             <input
               type="email"
               className="form-control mt-1"
@@ -56,7 +56,7 @@ function Login({ setStoredToken }) {
             />
           </div>
           <div className="form-group mt-3">
-            <label>Password</label>
+            <label className="label">Password</label>
             <input
               type="password"
               className="form-control mt-1"
@@ -65,16 +65,19 @@ function Login({ setStoredToken }) {
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
+          <p className="remember me text-right mt-2">
+            <a href="#" text-decoration> Remember me</a>
+          </p>
+          <p className="forgot-password text-right mt-2">
+            <a href="#" text-decoration> Forgot Password?</a>
+          </p>
           <div className="d-grid gap-2 mt-3">
             <button type="submit"
              className="btn btn-success"
              onClick={handleSubmit}>
-              Submit
+              Login
             </button>
           </div>
-          <p className="forgot-password text-right mt-2">
-            <a href="#" text-decoration> Forgot Password?</a>
-          </p>
         </div>
       </form>
     </div>
