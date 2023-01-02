@@ -8,6 +8,7 @@ function SignUp({ setStoredToken }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [role, setRole] = useState("");
+  const navigate = useNavigate("/");
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -37,7 +38,7 @@ function SignUp({ setStoredToken }) {
     setPassword("");
     
    setTimeout(()=>{
-    useNavigate("/");
+   navigate("/")
     },2000)
   };
   return (
