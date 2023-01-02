@@ -1,5 +1,6 @@
 import React,{useState, useEffect} from "react";
 import CarbonCredit from "./CarbonCredit";
+import "./CarbonStyle.css"
 
 function CarbonCredits() {
 const [carbonCard, setCarbonCard]=useState([]);
@@ -11,6 +12,9 @@ useEffect(() => {
   });
 }, []);
   return <div>
+    <>
+    About Carbon Projects
+    </>
     <CarbonCredit content={carbonCard}/>
   </div>;
 }
