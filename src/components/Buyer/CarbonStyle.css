@@ -1,7 +1,11 @@
+.title{
+    text-align: center;
+    background-image: url('');
+}
 .gridcard{
     display: grid;
     column-gap: 30px;
-    row-gap: 30px;
+    row-gap: 25px;
     grid-template-columns: auto auto auto;
     margin: 2% 5%;
 }
@@ -12,7 +16,8 @@
     max-height: max-content;
 }
 .Card img{
-    width: 400px;
+    width: 395px;
+    height: 220px;
 }
 .carbonbg{
     text-align: center;

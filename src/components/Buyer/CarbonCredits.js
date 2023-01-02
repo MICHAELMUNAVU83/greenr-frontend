@@ -12,9 +12,12 @@ useEffect(() => {
   });
 }, []);
   return(
+    <> 
+    <p className="title">Available Carbon Projects</p>
   <div className="gridcard"> 
     <CarbonCredit content={carbonCard}/>
-  </div>)
+  </div>
+  </>)
 }
 
 export default CarbonCredits;
