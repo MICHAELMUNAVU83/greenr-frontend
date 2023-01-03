@@ -6,6 +6,8 @@ function Navbar() {
     <div>
       <Link to="/">Home</Link>
       <Link to="/carboncredits">Carbon Credits</Link>
+      <Link to="/eachcarboncredit/:id">EachCarbonCredit</Link>
+
     </div>
   );
 }

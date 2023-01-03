@@ -17,7 +17,7 @@ const navigate = useNavigate();
      to="EachCarbonCredit"
      onClick={(e) => {
     e.preventDefault();
-    navigate("/EachCarbonCredit");
+    navigate("/eachcarboncredit/:id");
   }}
  >
   More details
