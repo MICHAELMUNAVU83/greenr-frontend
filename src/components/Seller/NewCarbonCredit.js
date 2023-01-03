@@ -4,7 +4,7 @@ function NewCarbonCredit() {
   return (
     <div>
         <p className="title">Add New Carbon Project</p>
-        <form className="signup-form">
+        <form className="signup-form1">
             <p>Fill in the details below to add a new carbon project</p>
         <label>
           Source of carbon offset

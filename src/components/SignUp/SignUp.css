@@ -2,12 +2,18 @@
   margin: 8% 0px;
 }
 .signup-form {
-  margin: 2% auto;
+  margin: 4% auto;
   width: 40%;
   padding: 2%;
   border: 1px solid rgb(209, 207, 207);
   box-shadow: rgb(0 0 0 / 16%) 1px 1px 10px;
   border-radius: 8px;
+}
+.signup-form1 {
+  margin: 4% auto;
+  width: 40%;
+  padding: 2%;
+  border: 1px solid rgb(209, 207, 207);
 }
 aside {
   display: flex;
