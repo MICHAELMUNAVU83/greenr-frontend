@@ -5,7 +5,8 @@ import Login from "./components/Login/Login";
 import Home from "./Pages/Home";
 import SplashScreen from "./Pages/SplashScreen";
 import CarbonCredits from "./components/Buyer/CarbonCredits";
-import Navbar from "./components/NavBar/Navbar";
+import BuyerNavbar from "./components/NavBar/BuyerNavbar";
+import SellerNavBar from "./components/NavBar/SellerNavBar";
 import EachCarbonCredit from "./components/Buyer/EachCarbonCredit";
 
 function App() {
