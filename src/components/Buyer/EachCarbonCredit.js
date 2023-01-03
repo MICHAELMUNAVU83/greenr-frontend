@@ -22,7 +22,7 @@ const EachCarbonCredit = () => {
         <img className='img' src="https://images.unsplash.com/photo-1503785640985-f62e3aeee448?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1174&q=80" alt="image"/>
         <div className='carbondetails'>
             <button type="button" class="btn btn-secondary">{carbon.price}</button>
-            <p className='paragraph'>As trees grow, they take in carbon from the air and store it in wood, plant matter, and in the soil,
+            <p className='carbonparagraph'>As trees grow, they take in carbon from the air and store it in wood, plant matter, and in the soil,
                making them what scientists call “carbon sinks.”
                In this way, forests play an important role in the global carbon
                cycle by soaking up lots of carbon dioxide that would otherwise live in the atmosphere.
