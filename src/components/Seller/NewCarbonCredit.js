@@ -2,6 +2,9 @@ import React, { useState } from "react";
 
 function NewCarbonCredit({ loggedInUserId }) {
   const [image, setImage] = useState("");
+  const [amount, setAmount] = useState("");
+  const [price, setPrice] = useState("");
+  const [source, setSource] = useState("");
   const uploadImage = (files) => {
     const formData = new FormData();
     formData.append("file", files[0]);
