@@ -15,16 +15,18 @@ function NewCarbonCredit({ loggedInUserId }) {
     formData.append("upload_preset", "e2e6z2lx");
     fetch("https://api.cloudinary.com/v1_1/dakiak4mc/image/upload", {
       method: "POST",
-      body: formData,
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify (formData),
     })
     setFormData({
-      amount: 'amount',
-      image: 'image',
-      price: 'price',
-      source:'source',
-      user_id: 'loggedInUserId ',
+      amount:'',
+      image: '',
+      price: '',
+      source:'',
+      user_id: loggedInUserId ,
   })
-  console.log(formData)
   navigate("/carboncredits")
       .then((response) => response.json())
       .then((data) => {
