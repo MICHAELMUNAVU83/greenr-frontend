@@ -9,6 +9,7 @@ function BuyerNavbar({ setStoredToken }) {
 
       <Link to="/">Home</Link>
       <Link to="/carboncredits">Buy Credits</Link>
+      <Link to="/newcarboncredit">Add New Carbon Credit</Link>
       <button
         onClick={() => {
           localStorage.setItem("token", "");
