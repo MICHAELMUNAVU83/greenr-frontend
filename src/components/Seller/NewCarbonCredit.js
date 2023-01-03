@@ -5,6 +5,7 @@ function NewCarbonCredit({ loggedInUserId }) {
   const [amount, setAmount] = useState("");
   const [price, setPrice] = useState("");
   const [source, setSource] = useState("");
+  const [formData, setFormData] = useState("");
   const uploadImage = (files) => {
     const formData = new FormData();
     formData.append("file", files[0]);
@@ -13,6 +14,14 @@ function NewCarbonCredit({ loggedInUserId }) {
       method: "POST",
       body: formData,
     })
+    setFormData({
+      amount: 'amount',
+      image: 'image',
+      price: 'price',
+      source:'source',
+      user_id: 'loggedInUserId ',
+  })
+  console.log(formData)
       .then((response) => response.json())
       .then((data) => {
         setImage(data.secure_url);
