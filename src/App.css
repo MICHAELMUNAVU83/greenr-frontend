@@ -36,3 +36,26 @@
     transform: rotate(360deg);
   }
 }
+.bg-c-green{
+  background-color: #50ce07;
+}
+.bg-c-grey{
+  background-color:#999
+
+}
+.btn{
+  color: #ffff;
+  background-color:#50ce07;
+}
+.footer{
+  background-color:#50ce07;
+}
+.heading{
+  color:#50ce07
+}
+
+.image-spacing{
+  height: 50;
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
