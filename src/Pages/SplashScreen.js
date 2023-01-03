@@ -30,7 +30,7 @@ function SplashScreen() {
             </div>
             <div className="col-md-4">
               <div className="card shadow">
-                <img className=" px-5"src="https://w7.pngwing.com/pngs/787/911/png-transparent-computer-icons-garden-natural-icon-angle-leaf-building.png" className="w-100 border-bottom" alt="services" />
+                <img src="https://w7.pngwing.com/pngs/787/911/png-transparent-computer-icons-garden-natural-icon-angle-leaf-building.png" className="w-100 border-bottom px-5" alt="services" />
               </div>
                 <div className="card-body text-center">
                   
