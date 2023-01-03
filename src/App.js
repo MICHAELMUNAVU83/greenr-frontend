@@ -15,6 +15,7 @@ function App() {
   const [storedToken, setStoredToken] = useState(localStorage.getItem("token"));
 
   const [role, setRole] = useState("");
+  const [loggedInUserId, setLoggedInUserId] = useState("");
   useEffect(() => {
     fetch("/api/v1/profile ", {
       method: "GET",
@@ -25,7 +26,10 @@ function App() {
       },
     })
       .then((res) => res.json())
-      .then((data) => setRole(data.user.role));
+      .then((data) => {
+        setRole(data.user.role)
+        setLoggedInUserId(data.user.id)
+      });
   }, [storedToken]);
 
   return (
@@ -48,7 +52,7 @@ function App() {
             />
             <Route
               path="/newcarboncredit"
-              element={<NewCarbonCredit />}
+              element={<NewCarbonCredit loggedInUserId={loggedInUserId} />}
             />
           </Routes>
           

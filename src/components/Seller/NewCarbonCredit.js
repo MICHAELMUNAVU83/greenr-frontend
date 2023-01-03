@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function NewCarbonCredit() {
+function NewCarbonCredit({ loggedInUserId }) {
   const [image, setImage] = useState("");
   const uploadImage = (files) => {
     const formData = new FormData();
