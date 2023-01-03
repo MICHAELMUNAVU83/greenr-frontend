@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function NewCarbonCredit({ loggedInUserId }) {
   const [image, setImage] = useState("");
@@ -6,6 +7,8 @@ function NewCarbonCredit({ loggedInUserId }) {
   const [price, setPrice] = useState("");
   const [source, setSource] = useState("");
   const [formData, setFormData] = useState("");
+  const navigate = useNavigate();
+
   const uploadImage = (files) => {
     const formData = new FormData();
     formData.append("file", files[0]);
@@ -22,6 +25,7 @@ function NewCarbonCredit({ loggedInUserId }) {
       user_id: 'loggedInUserId ',
   })
   console.log(formData)
+  navigate("/carboncredits")
       .then((response) => response.json())
       .then((data) => {
         setImage(data.secure_url);
