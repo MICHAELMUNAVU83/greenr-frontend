@@ -12,6 +12,14 @@ function NewCarbonCredit({ loggedInUserId }) {
   const [formData, setFormData] = useState("initialState");
   const navigate = useNavigate();
 
+  function handleChange(e) {
+    setFormData({
+      ...formData,
+      [e.target.id]: e.target.value,
+    });
+  }
+
+
   const uploadImage = (files) => {
     const formData = new FormData();
     formData.append("file", files[0]);
