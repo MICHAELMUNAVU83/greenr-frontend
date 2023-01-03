@@ -1,8 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./CarbonStyle.css"
+import { useNavigate } from "react-router-dom";
 
 function CarbonCredit(props) {
+const navigate = useNavigate();
   return (
   <>
   {props.content.map((carbons)=>(
@@ -11,7 +13,15 @@ function CarbonCredit(props) {
       <p><Link>{carbons.source}</Link></p>
       <p>At a price of ${carbons.price}, 10,000 {carbons.source} planted on 2 acres of land.</p>
       <p>Offsetting {carbons.amount} of C02</p>
-      <a href="#">More Details</a>
+      <Link
+     to="EachCarbonCredit"
+     onClick={(e) => {
+    e.preventDefault();
+    navigate("/EachCarbonCredit");
+  }}
+ >
+  More details
+  </Link>
       </div>
     ))}
   </>
