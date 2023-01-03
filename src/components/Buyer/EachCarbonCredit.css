@@ -1,8 +1,46 @@
 .carboncreditcard {
-    display:flex;
+     display:flex;
+    justify-content: space-around;
+    position:relative;
 
 }
 .img {
   height:350px;
-  width:100%
+  width:100%;
+  margin: 2em;
+}
+
+.h3{
+    font-family: 'Sans-serif';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 35px;
+    margin-top: 2.5em;
+ 
+}
+.paragraph1{
+    font-family: 'Poppins';
+}
+.btn-outline-success{
+    border: 2px solid #27963C;
+    border-radius: 50px;
+    width: 80px;
+}
+.carbonparagraph{
+    font-family: 'Poppins';
+}
+.btn-success{
+   font-family: sans-serif;
+}
+.victoriaparagraph{
+    color: #27963C;
+    position: absolute;
+    width: 257px;
+    height: 150px;
+    left: 600px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    margin-top: 1.5em;
 }
