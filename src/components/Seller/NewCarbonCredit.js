@@ -1,12 +1,15 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+const initialState = {
+  amount: "",
+  image: "",
+  price: "",
+  source: "",
+};
+
 function NewCarbonCredit({ loggedInUserId }) {
-  const [image, setImage] = useState("");
-  const [amount, setAmount] = useState("");
-  const [price, setPrice] = useState("");
-  const [source, setSource] = useState("");
-  const [formData, setFormData] = useState("");
+  const [formData, setFormData] = useState("initialState");
   const navigate = useNavigate();
 
   const uploadImage = (files) => {
