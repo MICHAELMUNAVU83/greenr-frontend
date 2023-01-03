@@ -45,7 +45,12 @@ function App() {
               path="/eachcarboncredit/:id"
               element={<EachCarbonCredit />}
             />
+            <Route
+              path="/newcarboncredit"
+              element={<EachCarbonCredit />}
+            />
           </Routes>
+          
           <Footer />
         </Router>
       ) : (
