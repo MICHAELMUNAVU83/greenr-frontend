@@ -35,7 +35,7 @@ function App() {
               element={<Home setStoredToken={setStoredToken} />}
             />
             <Route path="/carboncredits" element={<CarbonCredits />} />
-            <Route path="/eachcarboncredit/:id" element={<EachCarbonCredit />} />
+            <Route path="/carboncredits/:id" element={<EachCarbonCredit />} />
 
           </Routes>
         </Router>
