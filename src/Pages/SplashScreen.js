@@ -11,10 +11,10 @@ function SplashScreen() {
       <div className="row ">
       <div className="col-md-5 p-5 text-center">
         <h3 className="m-5"> Offset your carbon emission </h3>
-        <h5 className="m-5">Greenr makes it easy for you to buy and sell carbon credits </h5>
-        <button type="button" className="btn bg-green btn-outline-success "> Get Started</button>
+        <p className="m-5">Greenr makes it easy for you to buy and sell carbon credits </p>
+        <button type="button" className="btn btn-success btn-lg text-white me-md-2 "> Get Started</button>
       </div>
-      <div className="col-md-4 m-5 bg-c-green">
+      <div className="col-md-4 m-5 ">
         <img className=" img-fluid" src="https://api.time.com/wp-content/uploads/2018/05/forest-bathing.jpg?quality=85&w=800" alt="frest"/>
 
       </div>
