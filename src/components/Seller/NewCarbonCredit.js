@@ -32,10 +32,8 @@ function NewCarbonCredit() {
           />
         <label>
           Project Image
-          </label> 
-          <button className='bg-lime-500'>
-         Select file  
-          </button>       
+          </label> <br/>
+            <input type='file' className="form-control signup-input"/>    
         <button className="signup-button">Submit</button>
       </form>
     </div>
