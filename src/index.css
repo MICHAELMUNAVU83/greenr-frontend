@@ -28,9 +28,9 @@ code {
   color:#50ce07;
 
 }
-.active{
-  background-color:#50ce07;
-  color: #ffff;
+.green-active{
+  color:#50ce07;
+  
 }
 /* .nav-pills{
   background-color:#50ce07;
