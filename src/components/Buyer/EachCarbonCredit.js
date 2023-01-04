@@ -24,7 +24,7 @@ const EachCarbonCredit = () => {
     <div className="carboncreditcard ">
       <p className="victoriaparagraph">
         <IoLocationOutline />
-        Victoria Island, Lagos
+        {carbon.location}
       </p>
       <img
         className="img"
