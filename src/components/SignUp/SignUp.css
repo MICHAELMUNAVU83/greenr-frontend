@@ -21,6 +21,7 @@
 .signup-form1 p{
   padding-bottom: 1%;
   color: green;
+
 }
 aside {
   display: flex;
@@ -45,7 +46,7 @@ aside p {
   padding: 10px 0px;
   border-radius: 5px;
   color: rgb(229, 229, 229);
-  margin-top: 5%;
+  margin-top: 7%;
 }
 .contain{
   border: 2px solid grey;
