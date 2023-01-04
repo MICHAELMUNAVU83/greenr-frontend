@@ -1,14 +1,23 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState, useEffect } from 'react'
+import { Link, useParams } from 'react-router-dom'
 import './AddPurchase.css'
 
 function AddPurchase() {
+    const [carbonToBePurchased, setCarbonToBePurchased] = useState([]);
+    const {id} = useParams();
+    useEffect(() => {
+        fetch(`/api/v1/carbon_credits/${id}`)
+          .then((res) => res.json())
+          .then((data) => {
+            setCarbonToBePurchased(data);
+          });
+      }, []);
   return (<>
   <p className="title">Purchase Carbon Credit</p>
     <div className='signup-form2'>
         <>
-        <p>Your have opted to purchase <Link className='linkstyle'>10,000 trees planted on 
-        2 acres of land. Offsetting 2T of Co2</Link> at <b>$10,000</b>. 
+        <p>Your have opted to purchase from {carbonToBePurchased.source} <Link className='linkstyle'>10,000 trees planted on 
+        2 acres of land. Offsetting {carbonToBePurchased.amount} of Co2</Link> at <b>${carbonToBePurchased.price}</b>. 
         Complete the details below and Checkout to finish the 
         transaction.
         </p>
