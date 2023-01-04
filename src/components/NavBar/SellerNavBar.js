@@ -7,17 +7,17 @@ function SellerNavbar({ setStoredToken }) {
   const navigate = useNavigate();
   return (
     <nav className="navbar navbar-expand-lg bg-light">
-    <div className="container-fluid">
+    <div className="container">
       <img src={headerlogo} alt="headerlogo" style={{width: '100px'}} />
       <ul className="nav nav-fill" >
         <li className="nav-item ">
-          <Link className="nav-link green-active" data-bs-toggle="pill" to="/" >Home</Link>
+          <Link className="nav-link green-active"  activeStyle={{ backgroundColor:"ffff" }} data-mdb-toggle="pill" to="/" >Home</Link>
         </li>
         <li className="nav-item ">
-          <Link className="nav-link green-active" data-bs-toggle="pill" to="/mycarboncredits">My Carbon Credits</Link>
+          <Link className="nav-link green-active" data-mdb-toggle="pill" to="/mycarboncredits">My Carbon Credits</Link>
           </li>
         <li className="nav-item ">
-          <Link className="nav-link green-active" to="/newcarboncredit">Add New Carbon Credit</Link>
+          <Link className="nav-link green-active"  activeStyle={{ backgroundColor: "#ffff "}} data-mdb-toggle="pill"  to="/newcarboncredit">Add New Carbon Credit</Link>
           </li>
       </ul>
       
