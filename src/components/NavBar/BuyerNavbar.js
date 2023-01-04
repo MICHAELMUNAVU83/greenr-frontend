@@ -6,7 +6,7 @@ function BuyerNavbar({ setStoredToken }) {
   const navigate = useNavigate();
   return (
     <nav className="navbar navbar-expand-lg bg-light">
-      <div className="container-fluid">
+      <div className="container-fluid mt-3">
       <img src={headerlogo} alt="headerlogo" />
       <button
       class="navbar-toggler"
@@ -19,10 +19,10 @@ function BuyerNavbar({ setStoredToken }) {
     >
       <i class="fas fa-bars"></i>
     </button>
-    <ul className="navbar-nav">
-      <li className="nav-item"><Link className="nav-link" to="/" >Home</Link> </li>
-      <li className="nav-item"><Link className="nav-link" to="/carboncredits">Buy Credits</Link></li>
-      <li className="nav-item"><Link className="nav-link" to="/mypurchases">My Purchases</Link></li>
+    <ul className="nav nav-pills  nav-fill"  role="tablist">
+      <li className="nav-item "><Link className="nav-link link-dark active" data-bs-toggle="pill" to="/" >Home</Link> </li>
+      <li className="nav-item "><Link className="nav-link link-dark" data-bs-toggle="pill" to="/carboncredits">Buy Credits</Link></li>
+      <li className="nav-item "><Link className="nav-link link-dark" data-bs-toggle="pill" to="/mypurchases">My Purchases</Link></li>
 
       {/* <Link to="/">Home</Link>
       <Link to="/carboncredits">Buy Credits</Link>
@@ -30,6 +30,8 @@ function BuyerNavbar({ setStoredToken }) {
     </ul>
 
       <button
+      style={{ backgroundColor: "#00b300"}}
+      className="text-white btn border-none"
         onClick={() => {
           navigate("/");
           setTimeout(() => {
