@@ -8,13 +8,20 @@ import {IoLocationOutline} from "react-icons/io5"
 const EachCarbonCredit = () => {
 
     const [carbon, setCarbon ] = useState([]);
+    const [username , setUsername] = useState("");
     const {id} = useParams();
+
+ 
     // const navigate = useNavigate();
 
     useEffect(() => {
      fetch(`/api/v1/carbon_credits/${id}`)
      .then(res => res.json())
-     .then (data => (setCarbon(data)))
+     .then (data => {
+          setCarbon(data)
+          console.log(data)
+          setUsername(data.user.username)
+     })
     },[])
     
 
@@ -25,7 +32,7 @@ const EachCarbonCredit = () => {
         <div className='carbondetails'>
             <h3 className='h3'>10,000 trees planted on 2 acres
              of land. Offsetting 2T of Co2</h3>
-             <p className='paragraph1'>By {carbon.user.username}</p>
+             <p className='paragraph1'>By {username}</p>
             <button type="button" className="btn btn-outline-success ">{carbon.price}</button>
             <p className='carbonparagraph'>As trees grow, they take in carbon from the air and store it in wood, plant matter, and in the soil,
                making them what scientists call “carbon sinks.”
