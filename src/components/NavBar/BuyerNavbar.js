@@ -8,7 +8,7 @@ function BuyerNavbar({ setStoredToken }) {
     <nav className="navbar navbar-expand-lg bg-light">
       <div className="container-fluid mt-3">
       <img src={headerlogo} alt="headerlogo" />
-      <button
+      {/* <button
       class="navbar-toggler"
       type="button"
       data-mdb-toggle="collapse"
@@ -18,16 +18,22 @@ function BuyerNavbar({ setStoredToken }) {
       aria-label="Toggle navigation"
     >
       <i class="fas fa-bars"></i>
-    </button>
-    <ul className="nav nav-pills  nav-fill"  role="tablist">
-      <li className="nav-item "><Link className="nav-link link-dark active" data-bs-toggle="pill" to="/" >Home</Link> </li>
-      <li className="nav-item "><Link className="nav-link link-dark" data-bs-toggle="pill" to="/carboncredits">Buy Credits</Link></li>
-      <li className="nav-item "><Link className="nav-link link-dark" data-bs-toggle="pill" to="/mypurchases">My Purchases</Link></li>
+    </button> */}
+     <ul className="nav nav-fill" >
+      <li className="nav-item "><Link className="nav-link link-dark active" data-mdb-toggle="pill" to="/" >Home</Link> </li>
+      <li className="nav-item "><Link className="nav-link link-dark" data-mdb-toggle="pill" to="/carboncredits">Buy Credits</Link></li>
+      <li className="nav-item "><Link className="nav-link link-dark" data-mdb-toggle="pill" to="/mypurchases">My Purchases</Link></li>
 
       {/* <Link to="/">Home</Link>
       <Link to="/carboncredits">Buy Credits</Link>
       <Link to="/mypurchases">My Purchases</Link> */}
-    </ul>
+    </ul> 
+
+    {/* <div className="nav nav-pills  nav-fill">
+      <Link className="nav-item nav-link " to="/">Home</Link>
+      <Link className="nav-item nav-link " to="/carboncredits">Buy Credits</Link>
+      <Link className="nav-item nav-link " to="/mypurchases">My Purchases</Link>
+      </div> */}
 
       <button
       style={{ backgroundColor: "#00b300"}}

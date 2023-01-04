@@ -30,5 +30,11 @@ code {
 }
 .active{
   background-color:#50ce07;
+  color: #ffff;
 }
+/* .nav-pills{
+  background-color:#50ce07;
+  color: #ffff;
+
+} */
 
