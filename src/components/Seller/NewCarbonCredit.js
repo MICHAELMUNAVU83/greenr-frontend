@@ -37,10 +37,10 @@ function NewCarbonCredit({ loggedInUserId }) {
       body: JSON.stringify (formData),
     })
     setFormData({
-      amount:amount,
-      image: image,
-      price: price,
-      source:source,
+      amount:'',
+      image: '',
+      price: '',
+      source:'',
       user_id: {loggedInUserId} ,
   })
   navigate("/carboncredits")
