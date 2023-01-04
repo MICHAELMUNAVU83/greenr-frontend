@@ -1,5 +1,4 @@
 import React from "react";
-import Footer from "../components/Footer/Footer";
 
 function Home({ setStoredToken }) {
   return (
@@ -13,7 +12,6 @@ function Home({ setStoredToken }) {
       >
         Log out
       </button>
-      <Footer />
     </div>
   );
 }
