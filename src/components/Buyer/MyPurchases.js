@@ -20,9 +20,9 @@ function MyPurchases({ loggedInUserId }) {
 
   return (
     <div className="mypurchases">
+      <div className="card">
 
-    MyPurchases
-
+      </div>
    </div>
   );  
 }
