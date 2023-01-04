@@ -37,7 +37,7 @@ function SplashScreen() {
                   <h3>Buy Carbon Credits</h3>
                  
                   <p>Offset your Carbon emission by purchasing credits</p>
-                  <Link to="/services" className="underline">More details</Link>
+                  <p className="underline">More details</p>
               </div>
 
             </div>
@@ -48,7 +48,7 @@ function SplashScreen() {
                 <div className="card-body">
                   <h3>Sell Carbon Credits</h3>
                   <p>Earn from your carbon offset projects by selling credits</p>
-                  <Link to="/services" className="underline">More details</Link>
+                  <p>lassName="underline">More details</p>
                 </div>
               </div>
 
@@ -62,7 +62,7 @@ function SplashScreen() {
                 <div className="card-body">
                   <h3>Track Your Impact</h3>
                   <p className="px-4">View data on your impact in reducing climate change</p>
-                  <Link to="/services" className="underline">More details</Link>
+                  <p className="underline">More details</p>
                 </div>
               
 
@@ -70,8 +70,8 @@ function SplashScreen() {
            </div>
         </div>
       </section>
-      <Link to="/signup">Sign up</Link>
-      <Link to="/login">Log in</Link>
+      {/* <Link to="/signup">Sign up</Link>
+      <Link to="/login">Log in</Link> */}
     </div>
   );
 }
