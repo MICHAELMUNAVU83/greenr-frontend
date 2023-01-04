@@ -1,13 +1,14 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import './AddPurchase.css'
 
 function AddPurchase() {
   return (<>
   <p className="title">Purchase Carbon Credit</p>
-    <div className='signup-form'>
-        
+    <div className='signup-form2'>
         <>
-        <p>Your have opted to purchase <a>10,000 trees planted on 
-        2 acres of land. Offsetting 2T of Co2</a>at <b>$10,000</b>. 
+        <p>Your have opted to purchase <Link className='linkstyle'>10,000 trees planted on 
+        2 acres of land. Offsetting 2T of Co2</Link> at <b>$10,000</b>. 
         Complete the details below and Checkout to finish the 
         transaction.
         </p>
