@@ -10,12 +10,15 @@ import SellerNavBar from "./components/NavBar/SellerNavBar";
 import EachCarbonCredit from "./components/Buyer/EachCarbonCredit";
 import Footer from "./components/Footer/Footer";
 import NewCarbonCredit from "./components/Seller/NewCarbonCredit";
+import MyCarbonCredits from "./components/Seller/MyCarbonCredits";
 import AddPurchase from "./components/Buyer/AddPurchase";
+import MyPurchases from "./components/Buyer/MyPurchases";
 
 function App() {
   const [storedToken, setStoredToken] = useState(localStorage.getItem("token"));
 
   const [role, setRole] = useState("");
+  const [loggedInUserId, setLoggedInUserId] = useState("");
   useEffect(() => {
     fetch("/api/v1/profile ", {
       method: "GET",
@@ -26,7 +29,10 @@ function App() {
       },
     })
       .then((res) => res.json())
-      .then((data) => setRole(data.user.role));
+      .then((data) => {
+        setRole(data.user.role)
+        setLoggedInUserId(data.user.id)
+      });
   }, [storedToken]);
 
   return (
@@ -49,7 +55,19 @@ function App() {
             />
             <Route
               path="/newcarboncredit"
-              element={<NewCarbonCredit />}
+              element={<NewCarbonCredit loggedInUserId={loggedInUserId} />}
+            />
+            <Route
+              path="/mycarboncredits"
+              element={<MyCarbonCredits loggedInUserId={loggedInUserId} />}
+            />
+            <Route
+              path="/addpurchase/:id"
+              element={<AddPurchase loggedInUserId={loggedInUserId} />}
+            />
+            <Route
+              path="/mypurchases"
+              element={<MyPurchases loggedInUserId={loggedInUserId} />}
             />
             <Route
               path="/addpurchase"
