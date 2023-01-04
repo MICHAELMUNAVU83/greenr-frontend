@@ -1,0 +1,16 @@
+.signup-form2 {
+    margin: 4% auto;
+    width: 53%;
+    padding: 4%;
+    border: 1px solid rgb(209, 207, 207);
+  }
+.signup-form2 label{
+    padding-top: 3%;
+  }
+  .signup-form2 p{
+   text-align: center;
+   font-size: 22px;
+  }
+  .linkstyle{
+    color: green;
+  }
