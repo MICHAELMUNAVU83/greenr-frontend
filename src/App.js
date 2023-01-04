@@ -10,6 +10,7 @@ import SellerNavBar from "./components/NavBar/SellerNavBar";
 import EachCarbonCredit from "./components/Buyer/EachCarbonCredit";
 import Footer from "./components/Footer/Footer";
 import NewCarbonCredit from "./components/Seller/NewCarbonCredit";
+import MyCarbonCredits from "./components/Seller/MyCarbonCredits";
 
 function App() {
   const [storedToken, setStoredToken] = useState(localStorage.getItem("token"));
@@ -53,6 +54,10 @@ function App() {
             <Route
               path="/newcarboncredit"
               element={<NewCarbonCredit loggedInUserId={loggedInUserId} />}
+            />
+            <Route
+              path="/mycarboncredits"
+              element={<MyCarbonCredits loggedInUserId={loggedInUserId} />}
             />
           </Routes>
           

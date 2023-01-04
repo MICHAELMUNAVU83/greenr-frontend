@@ -2,11 +2,10 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 function NewCarbonCredit({ loggedInUserId }) {
-
-  const [image, setImage] = useState('');
-  const [amount, setAmount] = useState('');
-  const [price, setPrice] = useState('');
-  const [source, setSource] = useState('');
+  const [image, setImage] = useState("");
+  const [amount, setAmount] = useState("");
+  const [price, setPrice] = useState("");
+  const [source, setSource] = useState("");
 
   const navigate = useNavigate();
 
@@ -18,34 +17,33 @@ function NewCarbonCredit({ loggedInUserId }) {
       method: "POST",
       body: formData,
     })
-    .then((response) => response.json())
-    .then((data) => {
-      setImage(data.secure_url);
-    });
-};
-
-
-    const addACarbonCredit = (e) => {
-      e.preventDefault();
-      fetch("/api/v1/carbon_credits", {
-        method: "POST",
-        headers: {
-          Accepts: "application/json",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          image: image,
-          amount: amount,
-          price: price,
-          source: source,
-          user_id: loggedInUserId
-        }),
+      .then((response) => response.json())
+      .then((data) => {
+        setImage(data.secure_url);
       });
-  
-      setTimeout(() => {
-        navigate("/carboncredits");
-      }, 1000);
-    };
+  };
+
+  const addACarbonCredit = (e) => {
+    e.preventDefault();
+    fetch("/api/v1/carbon_credits", {
+      method: "POST",
+      headers: {
+        Accepts: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        image: image,
+        amount: amount,
+        price: price,
+        source: source,
+        user_id: loggedInUserId,
+      }),
+    });
+
+    setTimeout(() => {
+      navigate("/");
+    }, 1000);
+  };
   return (
     <div>
       <p className="title">Add New Carbon Project</p>
@@ -88,9 +86,10 @@ function NewCarbonCredit({ loggedInUserId }) {
           }}
           type="file"
           className="form-control signup-input"
-    
         />
-        <button className="signup-button" onClick={addACarbonCredit}>Submit</button>
+        <button className="signup-button" onClick={addACarbonCredit}>
+          Submit
+        </button>
       </form>
     </div>
   );

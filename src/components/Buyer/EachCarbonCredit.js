@@ -25,7 +25,7 @@ const EachCarbonCredit = () => {
         <div className='carbondetails'>
             <h3 className='h3'>10,000 trees planted on 2 acres
              of land. Offsetting 2T of Co2</h3>
-             <p className='paragraph1'>By Benaiah Wepundi</p>
+             <p className='paragraph1'>By {carbon.user.username}</p>
             <button type="button" className="btn btn-outline-success ">{carbon.price}</button>
             <p className='carbonparagraph'>As trees grow, they take in carbon from the air and store it in wood, plant matter, and in the soil,
                making them what scientists call “carbon sinks.”
