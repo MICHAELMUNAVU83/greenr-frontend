@@ -21,7 +21,10 @@ function MyPurchases({ loggedInUserId }) {
   return (
     <div className="mypurchases">
       <div className="card">
-
+      <img src="https://images.unsplash.com/photo-1503785640985-
+      f62e3aeee448?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90b
+      y1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1174&q=80"
+       alt="image"/>
       </div>
    </div>
   );  
