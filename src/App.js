@@ -69,6 +69,10 @@ function App() {
               path="/mypurchases"
               element={<MyPurchases loggedInUserId={loggedInUserId} />}
             />
+            <Route
+              path="/addpurchase"
+              element={<AddPurchase />}
+            />
           </Routes>
           
           <Footer />

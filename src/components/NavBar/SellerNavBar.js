@@ -1,17 +1,30 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
+import "./Navbar.css";
 import headerlogo from "../Images/headerlogo.png";
 
 function SellerNavbar({ setStoredToken }) {
   const navigate = useNavigate();
   return (
-    <div>
-      <img src={headerlogo} alt="headerlogo" />
-
-      <Link to="/">Home</Link>
-      <Link to="/mycarboncredits">My Carbon Credits</Link>
-      <Link to="/newcarboncredit">Add New Carbon Credit</Link>
+    <nav className="navbar navbar-expand-lg bg-light">
+    <div className="container">
+      <img src={headerlogo} alt="headerlogo" style={{width: '100px'}} />
+      <ul className="nav nav-fill" >
+        <li className="nav-item ">
+          <Link className="nav-link green-active" to="/" >Home</Link>
+        </li>
+        <li className="nav-item ">
+          <Link className="nav-link green-active" to="/mycarboncredits">My Carbon Credits</Link>
+          </li>
+        <li className="nav-item ">
+          <Link className="nav-link green-active"  to="/newcarboncredit">Add New Carbon Credit</Link>
+          </li>
+      </ul>
+      
+      
       <button
+      style={{ backgroundColor: "#00b300"}}
+      className="text-white btn border-none"
         onClick={() => {
           navigate("/");
           setTimeout(() => {
@@ -22,7 +35,8 @@ function SellerNavbar({ setStoredToken }) {
       >
         Log out
       </button>
-    </div>
+      </div>
+    </nav>
   );
 }
 
