@@ -5,6 +5,9 @@
   .green-active{
     color:black;
   }
+  Link:active{
+    color:#50ce07;
+  }
   /* *{
     background-color:red;
   } */
