@@ -8,7 +8,7 @@ function SellerNavbar({ setStoredToken }) {
   return (
     <nav className="navbar navbar-expand-lg bg-light">
     <div className="container-fluid">
-      <img src={headerlogo} alt="headerlogo" />
+      <img src={headerlogo} alt="headerlogo" style={{width: '100px'}} />
       <ul className="nav nav-fill" >
         <li className="nav-item ">
           <Link className="nav-link green-active" data-mdb-toggle="pill" to="/" >Home</Link>
@@ -23,6 +23,8 @@ function SellerNavbar({ setStoredToken }) {
       
       
       <button
+      style={{ backgroundColor: "#00b300"}}
+      className="text-white btn border-none"
         onClick={() => {
           navigate("/");
           setTimeout(() => {
