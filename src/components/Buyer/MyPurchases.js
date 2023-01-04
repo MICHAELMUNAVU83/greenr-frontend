@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import './MyPurchases.css';
 
 function MyPurchases({ loggedInUserId }) {
   const [purchases, setPurchases] = useState([]);
@@ -17,7 +18,13 @@ function MyPurchases({ loggedInUserId }) {
       });
   }, []);
 
-  return <div>MyPurchases</div>;
+  return (
+    <div className="mypurchases">
+
+    MyPurchases
+
+   </div>
+  );  
 }
 
 export default MyPurchases;
