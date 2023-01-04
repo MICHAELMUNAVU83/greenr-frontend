@@ -54,12 +54,11 @@ function SplashScreen() {
                 <p className="card-text p-3">
                   Offset your Carbon emission by purchasing credits
                 </p>
-                <Link
-                  to="/services"
+                <p
                   className="underline text-decoration-underline"
                 >
                   More details
-                </Link>
+                </p>
               </div>
             </div>
             <div className="border border-dark mx-2 p-1">
@@ -77,12 +76,11 @@ function SplashScreen() {
                 <p className="card-text p-3">
                   Earn from your carbon offset projects by selling credits
                 </p>
-                <Link
-                  to="/services"
+                <p
                   className="underline text-decoration-underline"
                 >
                   More details
-                </Link>
+                </p>
               </div>
             </div>
             <div className="border border-dark mx-2 p-1">
@@ -100,19 +98,17 @@ function SplashScreen() {
                 <p className="card-text p-3">
                   View data on your impact in reducing climate change
                 </p>
-                <Link
-                  to="/services"
+                <p
                   className="underline text-decoration-underline"
                 >
                   More details
-                </Link>
+                </p>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <Link to="/signup">Sign up</Link>
-      <Link to="/login">Log in</Link>
+      
     </div>
   );
 }
