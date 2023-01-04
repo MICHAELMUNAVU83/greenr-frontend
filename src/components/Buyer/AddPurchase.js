@@ -1,11 +1,16 @@
 import React from 'react'
 
 function AddPurchase() {
-  return (
+  return (<>
+  <p className="title">Purchase Carbon Credit</p>
     <div className='signup-form'>
+        
         <>
-        <p>Your have opted to purchase 10,000 trees planted on 2 acres of land. Offsetting 2T of Co2 at <b>$10000</b>. Complete the 
-        details below and Checkout to finish the transaction.</p>
+        <p>Your have opted to purchase <a>10,000 trees planted on 
+        2 acres of land. Offsetting 2T of Co2</a>at <b>$10,000</b>. 
+        Complete the details below and Checkout to finish the 
+        transaction.
+        </p>
         </>
         <form>
         <label>
@@ -27,6 +32,7 @@ function AddPurchase() {
         <button className="signup-button">Checkout</button>
       </form>
     </div>
+    </>
   )
 }
 

@@ -1,5 +1,6 @@
 import React,{useState, useEffect} from 'react';
 import { useNavigate, useParams } from "react-router";
+import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import './EachCarbonCredit.css';
 
@@ -15,7 +16,7 @@ const EachCarbonCredit = () => {
      .then(res => res.json())
      .then (data => (setCarbon(data)))
     },[])
-    
+function handleClickBuy(){}    
 
   return (
     <div className='carboncreditcard '>
@@ -27,7 +28,12 @@ const EachCarbonCredit = () => {
                In this way, forests play an important role in the global carbon
                cycle by soaking up lots of carbon dioxide that would otherwise live in the atmosphere.
             </p>
-            <button type="button" class="btn btn-success">Buy Now</button>
+            <Link 
+            to={`/addpurchase`}
+            >
+               <button type="button" class="btn btn-success">Buy Now</button>
+            </Link>
+            
         </div>
         
     </div>
