@@ -11,13 +11,13 @@ function SellerNavbar({ setStoredToken }) {
       <img src={headerlogo} alt="headerlogo" style={{width: '100px'}} />
       <ul className="nav nav-fill" >
         <li className="nav-item ">
-          <Link className="nav-link green-active"  activeStyle={{ backgroundColor:"ffff" }} data-mdb-toggle="pill" to="/" >Home</Link>
+          <Link className="nav-link green-active" to="/" >Home</Link>
         </li>
         <li className="nav-item ">
-          <Link className="nav-link green-active" data-mdb-toggle="pill" to="/mycarboncredits">My Carbon Credits</Link>
+          <Link className="nav-link green-active" to="/mycarboncredits">My Carbon Credits</Link>
           </li>
         <li className="nav-item ">
-          <Link className="nav-link green-active"  activeStyle={{ backgroundColor: "#ffff "}} data-mdb-toggle="pill"  to="/newcarboncredit">Add New Carbon Credit</Link>
+          <Link className="nav-link green-active"  to="/newcarboncredit">Add New Carbon Credit</Link>
           </li>
       </ul>
       
