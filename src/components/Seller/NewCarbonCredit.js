@@ -3,10 +3,10 @@ import { useNavigate } from "react-router-dom";
 
 function NewCarbonCredit({ loggedInUserId }) {
 
-  const [image, setImage] = useState('')
-  const [amount, setAmount] = useState('')
-  const [price, setPrice] = useState('')
-  const [source, setSource] = useState('')
+  const [image, setImage] = useState('');
+  const [amount, setAmount] = useState('');
+  const [price, setPrice] = useState('');
+  const [source, setSource] = useState('');
 
   const navigate = useNavigate();
 
@@ -38,6 +38,7 @@ function NewCarbonCredit({ loggedInUserId }) {
           amount: amount,
           price: price,
           source: source,
+          user_id: loggedInUserId
         }),
       });
   
