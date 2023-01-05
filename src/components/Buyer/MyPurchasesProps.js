@@ -3,19 +3,25 @@ import MyPurchases from './MyPurchases'
 import './MyPurchases.css';
 
 const MyPurchasesProps = ({ loggedInUserId }) => {
-    const [purchasesCard, setPurchasesCard]=useState([]);
+    const [purchases, setPurchases]=useState([]);
 
     useEffect(() => {
-        fetch(`/api/v1/my_purchases/${loggedInUserId}`)
-        .then((resp)=> resp.json())
-        .then((data)=>{
-          setPurchasesCard(data);
-        });
+        fetch(`/api/v1/my_purchases/${loggedInUserId}`, {
+          method: "GET",
+          headers: {
+            Accepts: "application/json",
+            "Content-Type": "application/json",
+          },
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            console.log(data);
+            setPurchases(data);
+          });
       }, []);
-
   return (
     <div className="mypurchases">
-        <MyPurchases purchasesCard={purchasesCard}/>
+        <MyPurchases purchases={purchases}/>
 
     </div>
   )
