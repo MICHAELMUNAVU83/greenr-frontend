@@ -15,7 +15,7 @@ const MyPurchasesProps = ({ loggedInUserId }) => {
 
   return (
     <div className="mypurchases">
-        <MyPurchases />
+        <MyPurchases purchasesCard={purchasesCard}/>
 
     </div>
   )
