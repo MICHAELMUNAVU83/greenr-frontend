@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
+import "./MyPurchases.css";
+import MyPurchase from "./MyPurchase";
 
-function MyPurchases({ loggedInUserId }) {
+function MyPurchases() {
   const [purchases, setPurchases] = useState([]);
+
   useEffect(() => {
-    fetch(`/api/v1/my_purchases/${loggedInUserId}`, {
+    fetch("/api/v1/my_purchases/3", {
       method: "GET",
       headers: {
         Accepts: "application/json",
@@ -17,7 +20,14 @@ function MyPurchases({ loggedInUserId }) {
       });
   }, []);
 
-  return <div>MyPurchases</div>;
+  return (
+    <>
+      <p className="title">Purchased Credits</p>
+      <div className="mypurchases">
+        <MyPurchase content={purchases} />
+      </div>
+    </>
+  );
 }
 
 export default MyPurchases;
