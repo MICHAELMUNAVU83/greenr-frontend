@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import './AddPurchase.css'
 
-function AddPurchase() {
+function AddPurchase({loggedInUserId}) {
     const [carbonToBePurchased, setCarbonToBePurchased] = useState([]);
     const {id} = useParams();
     useEffect(() => {

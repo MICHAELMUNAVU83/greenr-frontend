@@ -1,23 +1,40 @@
-import React from "react";
-import './MyPurchases.css';
+import React, { useState, useEffect } from "react";
+import "./MyPurchases.css";
+import MyPurchase from "./MyPurchase";
 
-function MyPurchases(props) {
- 
+function MyPurchases() {
+  const [purchases, setPurchases] = useState([]);
+
+  useEffect(() => {
+    fetch("/api/v1/my_purchases/3", {
+      method: "GET",
+      headers: {
+        Accepts: "application/json",
+        "Content-Type": "application/json",
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        setPurchases(data);
+      });
+  }, []);
+
   return (
     <>
-    {props.purchases.map((items) => (
-     <div className="card">
-      <img src="https://images.unsplash.com/photo-1503785640985-f62e3aeee448?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1174&q=80"
-      alt="image"/>
-         key={items.id}
-       <p>{items.buyer_location}</p>
-      <p>{items.buyer_phone_number}</p> 
-    </div>
-   ))}
-      
+      <p className="title">Available Carbon Projects</p>
+      <div className="gridcard">
+        <MyPurchase content={purchases} />
+      </div>
+      <div className="d-flex justify-content-center">
+        {" "}
+        <button className="btn btn-outline-success text-center">
+          {" "}
+          Buy Carbon Credits{" "}
+        </button>
+      </div>
     </>
-     
-       );  
+  );
 }
 
 export default MyPurchases;
