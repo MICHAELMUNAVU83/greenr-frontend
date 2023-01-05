@@ -22,8 +22,8 @@ function MyPurchases() {
 
   return (
     <>
-      <p className="title">Available Carbon Projects</p>
-      <div className="gridcard">
+      <p className="title">Purchased Credits</p>
+      <div className="mypurchases">
         <MyPurchase content={purchases} />
       </div>
       <div className="d-flex justify-content-center">
