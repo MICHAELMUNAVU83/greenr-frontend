@@ -1,17 +1,43 @@
 import React, { useState, useEffect } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { Link, useParams,useNavigate } from 'react-router-dom'
 import './AddPurchase.css'
+import CarbonCredit from './CarbonCredit';
 
 function AddPurchase({loggedInUserId}) {
     const [carbonToBePurchased, setCarbonToBePurchased] = useState([]);
+    const[buyerNumber,setBuyerNumber]= useState("");
+    const[location,setLocation]= useState("");
+
     const {id} = useParams();
+    const navigate= useNavigate();
+
     useEffect(() => {
-        fetch(`/api/v1/carbon_credits/${id}`)
-          .then((res) => res.json())
-          .then((data) => {
-            setCarbonToBePurchased(data);
-          });
-      }, []);
+      fetch(`/api/v1/carbon_credits/${id}`)
+        .then((res) => res.json())
+        .then((data) => {console.log(id)
+          setCarbonToBePurchased(data);
+        });
+    }, []);
+  
+
+    function handleSubmit(e) {
+      e.preventDefault();
+        fetch("/api/v1/purchases",{
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          carbon_credit_id:id,
+          user_id:loggedInUserId,
+          buyer_phone_number:buyerNumber,
+          buyer_location:location
+  
+        }),
+      })
+    navigate("/mypurchases")
+      }
+
   return (<>
   <p className="title">Purchase Carbon Credit</p>
     <div className='signup-form2'>
@@ -22,7 +48,7 @@ function AddPurchase({loggedInUserId}) {
         transaction.
         </p>
         </>
-        <form>
+        <form onSubmit={handleSubmit}>
         <label>
           Your Phone Number
         </label>
@@ -30,6 +56,8 @@ function AddPurchase({loggedInUserId}) {
             type="text"
             className="form-control signup-input"
             placeholder="eg 254712345678"
+            value={buyerNumber}
+            onChange={(e) => setBuyerNumber(e.target.value)}
           />
         <label>
           Your Location
@@ -38,6 +66,8 @@ function AddPurchase({loggedInUserId}) {
             type="text"
             className="form-control signup-input"
             placeholder="eg Nairobi Kenya"
+            value={location}
+            onChange={(e) => setLocation(e.target.value)}
           />      
         <button className="signup-button">Checkout</button>
       </form>
@@ -46,4 +76,4 @@ function AddPurchase({loggedInUserId}) {
   )
 }
 
-export default AddPurchase
+export default AddPurchase;
