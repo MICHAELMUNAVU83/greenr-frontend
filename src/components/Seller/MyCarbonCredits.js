@@ -11,6 +11,9 @@ function MyCarbonCredits({ loggedInUserId }) {
   }, []);
   return <div>
      <p className="title">My Carbon Credits</p>
+     {carbonCredits.map((credit)=>(
+      
+    ))}
   </div>;
 }
 
