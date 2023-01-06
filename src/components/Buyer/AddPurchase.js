@@ -1,30 +1,41 @@
 import React, { useState, useEffect } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { Link, useParams,useNavigate } from 'react-router-dom'
 import './AddPurchase.css'
+import CarbonCredit from './CarbonCredit';
 
 function AddPurchase({loggedInUserId}) {
     const [carbonToBePurchased, setCarbonToBePurchased] = useState([]);
-    const[buyerNumber,setBuyerNumber]= useState([]);
-    const[location,setLocation]= useState([]);
+    const[buyerNumber,setBuyerNumber]= useState("");
+    const[location,setLocation]= useState("");
+
     const {id} = useParams();
+    const navigate= useNavigate();
+
+    useEffect(() => {
+      fetch(`/api/v1/carbon_credits/${id}`)
+        .then((res) => res.json())
+        .then((data) => {console.log(id)
+          setCarbonToBePurchased(data);
+        });
+    }, []);
+  
 
     function handleSubmit(e) {
       e.preventDefault();
-        fetch(`/api/v1/carbon_credits/${id}`,{
+        fetch("/api/v1/purchases",{
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
+          carbon_credit_id:id,
+          user_id:loggedInUserId,
           buyer_phone_number:buyerNumber,
           buyer_location:location
   
         }),
       })
-          .then((res) => res.json())
-          .then((data) => {
-            setCarbonToBePurchased(data);
-          });
+    navigate("/mypurchases")
       }
 
   return (<>

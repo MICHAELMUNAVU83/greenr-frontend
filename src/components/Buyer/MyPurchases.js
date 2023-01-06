@@ -2,11 +2,11 @@ import React, { useState, useEffect } from "react";
 import "./MyPurchases.css";
 import MyPurchase from "./MyPurchase";
 
-function MyPurchases() {
+function MyPurchases({loggedInUserId}) {
   const [purchases, setPurchases] = useState([]);
 
   useEffect(() => {
-    fetch("/api/v1/my_purchases/3", {
+    fetch(`/api/v1/my_purchases/${loggedInUserId}`, {
       method: "GET",
       headers: {
         Accepts: "application/json",
