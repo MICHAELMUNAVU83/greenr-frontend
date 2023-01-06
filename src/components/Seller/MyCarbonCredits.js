@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import './MyCarbonCredit.css'
+
 function MyCarbonCredits({ loggedInUserId }) {
   const [carbonCredits, setCarbonCredits] = useState([]);
   useEffect(() => {
@@ -9,8 +11,9 @@ function MyCarbonCredits({ loggedInUserId }) {
         setCarbonCredits(data);
       });
   }, []);
-  return <div>
+  return <>
      <p className="title">My Carbon Credits</p>
+     <div className="gridcard">
      {carbonCredits.map((credit)=>(
       <div className="Card1">
       <img src={credit.image} alt="image"/>
@@ -19,7 +22,8 @@ function MyCarbonCredits({ loggedInUserId }) {
       <p>Offsetting {credit.amount} of C02</p>
       </div>
     ))}
-  </div>;
+  </div>
+  </>
 }
 
 export default MyCarbonCredits;
