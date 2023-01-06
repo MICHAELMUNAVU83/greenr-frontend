@@ -16,7 +16,7 @@ function MyCarbonCredits({ loggedInUserId }) {
      <div className="gridcard">
      {carbonCredits.map((credit)=>(
       <div className="Card1">
-      <img src={credit.image} alt="image"/>
+      <img src="https://images.unsplash.com/photo-1503785640985-f62e3aeee448?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1174&q=80" alt="image"/>
       <p><Link>{credit.source}</Link></p>
       <p>At a price of ${credit.price}, 10,000 {credit.source} planted on 2 acres of land.</p>
       <p>Offsetting {credit.amount} of C02</p>
