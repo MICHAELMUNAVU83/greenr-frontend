@@ -12,7 +12,12 @@ function MyCarbonCredits({ loggedInUserId }) {
   return <div>
      <p className="title">My Carbon Credits</p>
      {carbonCredits.map((credit)=>(
-      
+      <div className="Card">
+      <img src={credit.image} alt="image"/>
+      <p><Link>{credit.source}</Link></p>
+      <p>At a price of ${credit.price}, 10,000 {credit.source} planted on 2 acres of land.</p>
+      <p>Offsetting {credit.amount} of C02</p>
+      </div>
     ))}
   </div>;
 }
