@@ -1,12 +1,34 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 
-const PendingCarbonCredits = () => {
+const PendingCarbonCredits = (props) => {
   return (
-    <div cla>
-      PendingCarbonCredits
-
-    </div>
+    <>
+    {props.content.map(
+      (carbonCredit) =>
+      carbonCredit.approved === false && (
+          <div className="Card">
+            <img
+              src="https://images.unsplash.com/photo-1503785640985-f62e3aeee448?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1174&q=80"
+              alt="image"
+            />
+            <p>
+              <Link>{carbonCredit.source}</Link>
+            </p>
+            <p>
+              At a price of ${carbonCredit.price}, 10,000 {carbonCredit.source} planted
+              on 2 acres of land.
+            </p>
+            <p>Offsetting {carbonCredit.amount} of C02</p>
+            {/* <Link
+              to={`/eachcarboncredit/${carbons.id}`}
+            >
+              More details
+            </Link> */}
+          </div>
+        )
+    )}
+  </>
   )
 }
 
