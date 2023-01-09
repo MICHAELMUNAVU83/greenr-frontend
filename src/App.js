@@ -13,6 +13,9 @@ import NewCarbonCredit from "./components/Seller/NewCarbonCredit";
 import MyCarbonCredits from "./components/Seller/MyCarbonCredits";
 import AddPurchase from "./components/Buyer/AddPurchase";
 import MyPurchases from "./components/Buyer/MyPurchases";
+import PendingCarbonCredits from "./components/Admin/PendingCarbonCredits";
+import AdminNavBar from "./components/NavBar/AdminNavBar";
+import AllPurchases from "./components/Admin/AllPurchases";
 
 function App() {
   const [storedToken, setStoredToken] = useState(localStorage.getItem("token"));
@@ -30,8 +33,8 @@ function App() {
     })
       .then((res) => res.json())
       .then((data) => {
-        setRole(data.user.role)
-        setLoggedInUserId(data.user.id)
+        setRole(data.user.role);
+        setLoggedInUserId(data.user.id);
       });
   }, [storedToken]);
 
@@ -43,6 +46,7 @@ function App() {
           {role === "seller" && (
             <SellerNavBar setStoredToken={setStoredToken} />
           )}
+          {role === "admin" && <AdminNavBar setStoredToken={setStoredToken} />}
           <Routes>
             <Route
               path="/"
@@ -69,12 +73,18 @@ function App() {
               path="/mypurchases"
               element={<MyPurchases loggedInUserId={loggedInUserId} />}
             />
+            <Route path="/addpurchase" element={<AddPurchase />} />
+
             <Route
-              path="/addpurchase"
-              element={<AddPurchase />}
+              path="/pendingcarboncredits"
+              element={<PendingCarbonCredits loggedInUserId={loggedInUserId} />}
+            />
+            <Route
+              path="/allpurchases"
+              element={<AllPurchases loggedInUserId={loggedInUserId} />}
             />
           </Routes>
-          
+
           <Footer />
         </Router>
       ) : (

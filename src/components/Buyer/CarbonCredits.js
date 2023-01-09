@@ -17,13 +17,7 @@ function CarbonCredits() {
       <div className="gridcard">
         <CarbonCredit content={carbonCard} />
       </div>
-      <div className="d-flex justify-content-center">
-        {" "}
-        <button className="btn btn-outline-success text-center">
-          {" "}
-          Buy Carbon Credits{" "}
-        </button>
-      </div>
+      
     </>
   );
 }
