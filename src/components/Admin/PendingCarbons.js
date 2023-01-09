@@ -21,8 +21,6 @@ const PendingCarbons = ({loggedInUserId}) => {
       });
   }, []);
 
-
-
   return (
     <>
       <p className="title">Pending Carbon Projects</p>

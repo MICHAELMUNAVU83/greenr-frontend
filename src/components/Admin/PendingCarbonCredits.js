@@ -17,7 +17,7 @@ const PendingCarbonCredits = ({content}) => {
         <p  className="p3">Offsetting {carbonCredit.amount} of C02</p>
       </div>
     ))}
-  </>
+   </>
    );
   };
   
