@@ -30,4 +30,5 @@ function PendingCarbonCredits({loggedInUserId}) {
     </>
   )
 }
+  
 export default PendingCarbonCredits;
