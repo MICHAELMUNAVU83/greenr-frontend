@@ -15,9 +15,13 @@ const PendingCarbons = () => {
   }, []);
 
   return (
-    <div>
-        PendingCarbons
-    </div>
+    <>
+      <p className="title">Pending Carbon Projects</p>
+      <div className="gridcard">
+        <PendingCarbonCredits content={pendingCard} />
+      </div>
+      
+    </>
   )
 }
 
