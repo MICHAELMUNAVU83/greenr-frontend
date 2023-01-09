@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import './PendingCarbonCredits.css';
+import './PendingCarbonCredit.css';
 import PendingCarbonCredits from './PendingCarbonCredits';
 
-const PendingCarbons = ({loggedInUserId}) => {
+function PendingCarbons() {
 
   const [pendingCard, setPendingCard] = useState([]);
 
   useEffect(() => {
-    fetch(`/api/v1/carbon_credits/${loggedInUserId}`, {
+    fetch("/api/v1/carbon_credits", {
       method: "GET",
       headers: {
         Accepts: "application/json",
@@ -17,7 +17,7 @@ const PendingCarbons = ({loggedInUserId}) => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        setPendingCard(data);
+        // setPendingCard(data);
       });
   }, []);
 
