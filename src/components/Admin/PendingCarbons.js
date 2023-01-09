@@ -1,35 +1,30 @@
-import React, { useState, useEffect } from 'react';
+import React from "react";
+import { Link } from "react-router-dom";
 import './PendingCarbonCredit.css';
-import PendingCarbonCredits from './PendingCarbonCredits';
 
-function PendingCarbons({loggedInUserId}) {
-
-  const [pendingCard, setPendingCard] = useState([]);
-
-  useEffect(() => {
-    fetch(`/api/v1/carbon_credits/${loggedInUserId}`, {
-      method: "GET",
-      headers: {
-        Accepts: "application/json",
-        "Content-Type": "application/json",
-      },
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        setPendingCard(data);
-      });
-  }, []);
+const PendingCarbons = ({ content }) => {
 
   return (
     <>
-      <p className="title">Pending Carbon Projects</p>
-      <div className="gridcard">
-        <PendingCarbonCredits content={pendingCard} />
+    {content ?.map((carbonCredit) => 
+       carbonCredit.approved === false &&
+    (
+      <div className="Card">
+        <img
+          src="https://images.unsplash.com/photo-1503785640985-f62e3aeee448?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1174&q=80"
+          alt="image"
+        /> 
+        <p className="p1">{carbonCredit.source}</p>
+        <p className="p2">  At a price of ${carbonCredit.price}, 10,000 {carbonCredit.source} planted
+           on 2 acres of land.</p>
+        <p  className="p3">Offsetting {carbonCredit.amount} of C02</p>
       </div>
-      
+    ))}
     </>
-  )
-}
+   );
+  };
+  
 
 export default PendingCarbons;
+
+
