@@ -18,11 +18,12 @@ const PendingCarbons = ({ content }) => {
         <p className="p2">  At a price of ${carbonCredit.price}, 10,000 {carbonCredit.source} planted
            on 2 acres of land.</p>
         <p  className="p3">Offsetting {carbonCredit.amount} of C02</p>
-        <Link
+        <p><button type="button" class="btn btn-success"> Approve</button></p>
+        {/* <Link
           to={`/eachcarboncredit/${carbonCredit.id}`}
          >
          More details
-       </Link>
+       </Link> */}
       </div>
     ))}
     </>

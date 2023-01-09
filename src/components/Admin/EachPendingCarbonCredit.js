@@ -47,13 +47,6 @@ const EachPendingCarbonCredit = () => {
           otherwise live in the atmosphere.
         </p>
 
-        <Link
-          style={{ backgroundColor: "#00b300" }}
-          className="text-white btn btn-success border-none"
-          to={`/addpurchase/${carbon.id}`}
-        >
-          Buy Now
-        </Link>
       </div>
     </div>
   );
