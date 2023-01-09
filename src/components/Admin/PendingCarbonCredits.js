@@ -2,7 +2,10 @@ import React from 'react'
 
 const PendingCarbonCredits = () => {
   return (
-    <div>PendingCarbonCredits</div>
+    <div cla>
+      PendingCarbonCredits
+
+    </div>
   )
 }
 
