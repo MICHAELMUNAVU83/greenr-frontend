@@ -1,9 +1,36 @@
-import React from 'react'
+import React, { useState, useEffect } from "react";
+import "./AllPurchases.css";
+import AllPurchase from "./AllPurchase";
+
+
 
 function AllPurchases() {
+
+  const [purchases, setPurchases] = useState([]);
+  
+  useEffect(() => {
+    fetch(`/api/v1/purchases`, {
+      method: "GET",
+      headers: {
+        Accepts: "application/json",
+        "Content-Type": "application/json",
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        setPurchases(data);
+      });
+  }, []);
   return (
-    <div>AllPurchases</div>
-  )
+    <>
+    <p className="title">All Purchases</p>
+    <div className="mypurchases">
+        <AllPurchase content={purchases} />
+      </div>
+    </>
+  );
 }
+
 
 export default AllPurchases
