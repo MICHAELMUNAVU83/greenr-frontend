@@ -6,7 +6,7 @@ const PendingCarbons = ({ content }) => {
 
   return (
     <>
-    {content ?.map((carbonCredit) => 
+    {content.map((carbonCredit) => 
        carbonCredit.approved === false &&
     (
       <div className="Card">
