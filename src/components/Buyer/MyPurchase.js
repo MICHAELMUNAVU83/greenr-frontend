@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./MyPurchases.css";
 import { IoLocationOutline } from "react-icons/io5";
 

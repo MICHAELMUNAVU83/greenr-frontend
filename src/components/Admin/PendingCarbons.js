@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react';
 import './PendingCarbonCredit.css';
 import PendingCarbonCredits from './PendingCarbonCredits';
 
-function PendingCarbons() {
+function PendingCarbons({loggedInUserId}) {
 
   const [pendingCard, setPendingCard] = useState([]);
 
   useEffect(() => {
-    fetch("/api/v1/carbon_credits", {
+    fetch(`/api/v1/carbon_credits/${loggedInUserId}`, {
       method: "GET",
       headers: {
         Accepts: "application/json",
@@ -17,7 +17,7 @@ function PendingCarbons() {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        // setPendingCard(data);
+        setPendingCard(data);
       });
   }, []);
 
@@ -32,4 +32,4 @@ function PendingCarbons() {
   )
 }
 
-export default PendingCarbons
+export default PendingCarbons;
