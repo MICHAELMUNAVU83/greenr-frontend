@@ -3,7 +3,17 @@ import { Link } from "react-router-dom";
 import './PendingCarbonCredit.css';
 
 const PendingCarbons = ({ content }) => {
+  const handleClick = (id) => {
+    fetch(`/api/v1/carbon_credits/${id}`
+    ,{
+      method: 'PATCH',
+      body: JSON.stringify({ approved: true }),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
 
+  }
   return (
     <>
     {content.map((carbonCredit) => 
@@ -18,7 +28,7 @@ const PendingCarbons = ({ content }) => {
         <p className="p2">  At a price of ${carbonCredit.price}, 10,000 {carbonCredit.source} planted
            on 2 acres of land.</p>
         <p  className="p3">Offsetting {carbonCredit.amount} of C02</p>
-        <p><button className="button">APPROVE</button></p>
+        <p><button className="button" onClick={()=>{{handleClick(carbonCredit.id)}}}>APPROVE</button></p>
         {/* <Link
           to={`/eachcarboncredit/${carbonCredit.id}`}
          >

@@ -4,6 +4,8 @@ import "./CarbonStyle.css";
 
 
 function CarbonCredit(props) {
+  
+  
 
   return (
     <>
@@ -29,6 +31,7 @@ function CarbonCredit(props) {
                 //   e.preventDefault();
                 //   navigate("/eachcarboncredit/:id");
                 // }}
+                
               >
                 More details
               </Link>
