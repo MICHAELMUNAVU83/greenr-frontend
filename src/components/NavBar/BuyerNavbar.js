@@ -17,7 +17,6 @@ function BuyerNavbar({ setStoredToken }) {
             <li className="nav-item "><Link className="nav-link green-active " data-mdb-toggle="pill" to="/mypurchases">My Purchases</Link></li>
           </ul> 
           <button
-          style={{ backgroundColor: "#00b300"}}
           className="text-white btn border-none"
             onClick={() => {
               navigate("/");

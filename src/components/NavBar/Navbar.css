@@ -12,12 +12,23 @@
 .navbar-links{
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 30%;
 }
 
 .brand {
   width: 8%;
 }
+
+.navbar-links button {
+  background-color: #27963C;
+  border-radius: 0px;
+}
+
+.navbar-links button:hover {
+  background-color: #80cc28;
+}
+
 
   
   
