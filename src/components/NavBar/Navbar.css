@@ -2,10 +2,22 @@
     color:hwb(98 3% 19%);
     
   }
-  .green-active{
-    color:black;
-  }
-  /* .nav-item:active{
-    color:#ce5707;
-  } */
+.green-active{
+  color:black;
+}
+/* .nav-item:active{
+  color:#ce5707;
+} */
+
+.navbar-links{
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+}
+
+.brand {
+  width: 8%;
+}
+
+  
   
