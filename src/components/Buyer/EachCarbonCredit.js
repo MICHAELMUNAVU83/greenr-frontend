@@ -21,24 +21,21 @@ const EachCarbonCredit = () => {
   }, []);
 
   return (
-    <div className="carboncreditcard ">
-      <p className="victoriaparagraph">
-        <IoLocationOutline />
-        {carbon.location}
-      </p>
-      <img
-        className="img"
-        src="https://images.unsplash.com/photo-1503785640985-f62e3aeee448?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1174&q=80"
-        alt="image"
-      />
+    <div className="cc-card container">
+      <div className="carbon-img" style={{backgroundImage: `url('${carbon.image}')`}}>
+      </div>
       <div className="carbondetails">
-        <h3 className="h3">
-          10,000 trees planted on 2 acres of land. Offsetting 2T of Co2
+        <p className="location">
+          <IoLocationOutline className="icon" />
+          {carbon.location}
+        </p>
+        <h3 className="cc-title">
+          {carbon.source} offsetting {carbon.amount} of CO2
         </h3>
-        <p className="paragraph1">By {username}</p>
-        <button type="button" className="btn btn-outline-success ">
-          {carbon.price}
-        </button>
+        <p className="cc-seller">By {username}</p>
+        <p className="cc-price">
+          {carbon.price} USD
+        </p>
         <p className="carbonparagraph">
           As trees grow, they take in carbon from the air and store it in wood,
           plant matter, and in the soil, making them what scientists call
@@ -49,7 +46,7 @@ const EachCarbonCredit = () => {
 
         <Link
           style={{ backgroundColor: "#00b300" }}
-          className="text-white btn btn-success border-none"
+          className="text-white btn border-none cc-purchase"
           to={`/addpurchase/${carbon.id}`}
         >
           Buy Now
