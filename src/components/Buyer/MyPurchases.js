@@ -23,7 +23,7 @@ function MyPurchases({loggedInUserId}) {
   return (
     <>
       <p className="title">Purchased Credits</p>
-      <div className="mypurchases">
+      <div className="mypurchases container">
         <MyPurchase content={purchases} />
       </div>
     </>
