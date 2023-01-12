@@ -5,7 +5,7 @@ import './MyCarbonCredit.css'
 function MyCarbonCredits({ loggedInUserId }) {
   const [carbonCredits, setCarbonCredits] = useState([]);
   useEffect(() => {
-    fetch(`/api/v1/my_carbon_credits/${loggedInUserId}`)
+    fetch(`http://localhost:3000/api/v1/my_carbon_credits/${loggedInUserId}`)
       .then((res) => res.json())
       .then((data) => {
         setCarbonCredits(data);

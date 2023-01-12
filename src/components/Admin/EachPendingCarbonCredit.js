@@ -11,7 +11,7 @@ const EachPendingCarbonCredit = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    fetch(`/api/v1/carbon_credits/${id}`)
+    fetch(`http://localhost:3000/api/v1/carbon_credits/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setCarbon(data);

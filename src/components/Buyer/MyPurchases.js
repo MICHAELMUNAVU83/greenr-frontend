@@ -6,7 +6,7 @@ function MyPurchases({loggedInUserId}) {
   const [purchases, setPurchases] = useState([]);
 
   useEffect(() => {
-    fetch(`/api/v1/my_purchases/${loggedInUserId}`, {
+    fetch(`http://localhost:3000/api/v1/my_purchases/${loggedInUserId}`, {
       method: "GET",
       headers: {
         Accepts: "application/json",

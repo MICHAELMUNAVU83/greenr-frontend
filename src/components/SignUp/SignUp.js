@@ -12,7 +12,7 @@ function SignUp({ setStoredToken }) {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    fetch("/api/v1/users", {
+    fetch("http://localhost:3000/api/v1/users", {
       method: "POST",
       headers: {
         Accepts: "application/json",

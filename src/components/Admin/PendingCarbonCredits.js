@@ -7,7 +7,7 @@ function PendingCarbonCredits() {
   const [pendingCard, setPendingCard] = useState([]);
 
   useEffect(() => {
-    fetch("/api/v1/carbon_credits", {
+    fetch("http://localhost:3000/api/v1/carbon_credits", {
       method: "GET",
       headers: {
         Accepts: "application/json",

@@ -9,7 +9,7 @@ function AllPurchases() {
   const [purchases, setPurchases] = useState([]);
   
   useEffect(() => {
-    fetch(`/api/v1/purchases`, {
+    fetch(`http://localhost:3000/api/v1/purchases`, {
       method: "GET",
       headers: {
         Accepts: "application/json",

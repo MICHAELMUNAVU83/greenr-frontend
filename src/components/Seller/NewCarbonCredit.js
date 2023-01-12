@@ -25,7 +25,7 @@ function NewCarbonCredit({ loggedInUserId }) {
 
   const addACarbonCredit = (e) => {
     e.preventDefault();
-    fetch("/api/v1/carbon_credits", {
+    fetch("http://localhost:3000/api/v1/carbon_credits", {
       method: "POST",
       headers: {
         Accepts: "application/json",

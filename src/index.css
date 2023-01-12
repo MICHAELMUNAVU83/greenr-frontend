@@ -12,28 +12,28 @@ code {
     monospace;
 }
 .bg-green{
-  background-color:#50ce07;
+  background-color:#80CC28;
 }
 .bg-grey{
   background-color:#e6f4d4;
 }
 .btn{
   color: #ffff;
-  background-color:#50ce07;
+  background-color:#80CC28;
 }
 .heading{
   color:#44ad07;
 }
 .underline{
-  color:#50ce07;
+  color:#80CC28;
 
 }
 .green-active{
-  color:#50ce07;
+  color:#80CC28;
   
 }
 /* .nav-pills{
-  background-color:#50ce07;
+  background-color:#80CC28;
   color: #ffff;
 
 } */

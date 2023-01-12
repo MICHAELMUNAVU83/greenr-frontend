@@ -5,7 +5,7 @@ import "./CarbonStyle.css";
 function CarbonCredits() {
   const [carbonCard, setCarbonCard] = useState([]);
   useEffect(() => {
-    fetch("/api/v1/carbon_credits"
+    fetch("http://localhost:3000/api/v1/carbon_credits"
     )
       .then((resp) => resp.json())
       .then((data) => {
