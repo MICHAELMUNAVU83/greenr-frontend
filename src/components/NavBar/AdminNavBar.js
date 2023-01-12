@@ -7,7 +7,7 @@ function AdminNavBar({ setStoredToken }) {
   const navigate = useNavigate();
   return (
     <nav className="navbar navbar-expand-lg bg-light">
-      <div className="container-fluid ">
+      <div className="container">
       <img src={headerlogo} alt="headerlogo" className="brand"/>
     <div className="nav-links">
      <ul className="nav nav-fill" >

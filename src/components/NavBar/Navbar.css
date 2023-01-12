@@ -1,5 +1,5 @@
 .green-active:hover{
-    color:hwb(98 3% 19%);
+    color: #80cc28;
     
   }
 .green-active{
@@ -13,24 +13,25 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 30%;
 }
 
 .brand {
-  width: 8%;
+  width: 10%;
 }
 
 .navbar-links button {
   background-color: #27963C;
   border-radius: 0px;
+  margin-left: 40px;
 }
 
 .navbar-links button:hover {
   background-color: #80cc28;
+
 }
 
 .navbar {
-  padding: 0.7% 5%;
+  padding: 20px 50px;
 }
 
 
