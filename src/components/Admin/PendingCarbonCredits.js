@@ -19,7 +19,7 @@ function PendingCarbonCredits() {
         console.log(data);
         setPendingCard(data);
       });
-  }, []);
+  }, [pendingCard]);
 
   return (
     <>
