@@ -42,15 +42,14 @@ function Login({ setStoredToken }) {
     setPassword("");
   };
   return (
-    <div className="Login-form-container">
-      <form className="Login-form">
-        <div className="Login-form-content">
-          <p className="Login-form-parag">Dont have an account?<a href='signup'>Signup</a></p>
-          <h3 className="Login-form-title">Welcome</h3>
-          <p className="Login-form-paragraph">Login to continue</p>
+    <div className="login-container container">
+      <form className="login-form">
+        <div className="login-form-content">
+          <p className="login-form-parag">Don't have an account?<a href='signup'>Signup</a></p>
+          <h3 className="login-form-title">Welcome</h3>
+          <p className="login-form-paragraph">Login to continue</p>
           <div className="form-group mt-3">
             <label className="login-label">Username </label>
-            <AiOutlineUser className="user"/>
             <input
               type="email"
               className="form-control mt-1"
@@ -62,7 +61,6 @@ function Login({ setStoredToken }) {
           
           <div className="form-group mt-3">
             <label className="login-label">Password</label>
-            <BiLockAlt className="lock"/>
             <input
               type="password"
               className="form-control mt-1"
