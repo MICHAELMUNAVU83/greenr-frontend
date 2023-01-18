@@ -15,7 +15,7 @@ function CarbonCredits() {
   return (
     <>
       <p className="title">Available Carbon Projects</p>
-      <div className="gridcard">
+      <div className="gridcard container">
       <CarbonCredit content={carbonCard} />
       </div>
       
