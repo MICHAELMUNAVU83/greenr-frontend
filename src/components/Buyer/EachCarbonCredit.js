@@ -22,8 +22,7 @@ const EachCarbonCredit = () => {
 
   return (
     <div className="cc-card container">
-      <div className="carbon-img" style={{backgroundImage: `url('${carbon.image}')`}}>
-      </div>
+      <img className="carbon-img" src= {carbon.image} />
       <div className="carbondetails">
         <p className="location">
           <IoLocationOutline className="icon" />
