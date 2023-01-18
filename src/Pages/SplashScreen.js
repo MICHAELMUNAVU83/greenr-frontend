@@ -6,7 +6,7 @@ import { TiHomeOutline } from "react-icons/ti";
 
 function SplashScreen() {
   return (
-    <div>
+    <div style={{marginBottom: '30px'}}>
       <section className="bg-grey">
         <div className="d-flex justify-content-around container">
           <div className="text-left m-5">
@@ -48,7 +48,7 @@ function SplashScreen() {
               </div>
 
               <div className="card-body text-center">
-                <h3 className="card-title p-2">Buy Carbon Credits</h3>
+                <h4 className="card-title p-2">Buy Carbon Credits</h4>
 
                 <p className="card-text p-3">
                   Offset your Carbon emission by purchasing credits
@@ -71,7 +71,7 @@ function SplashScreen() {
               </div>
 
               <div className="card-body text-center">
-                <h3 className="card-title p-2">Sell Carbon Credits</h3>
+                <h4 className="card-title p-2">Sell Carbon Credits</h4>
 
                 <p className="card-text p-3">
                   Earn from your carbon offset projects by selling credits
@@ -94,7 +94,7 @@ function SplashScreen() {
               </div>
 
               <div className="card-body text-center">
-                <h3 className="card-title p-2">Track Your Impact</h3>
+                <h4 className="card-title p-2">Track Your Impact</h4>
 
                 <p className="card-text p-3">
                   View data on your impact in reducing climate change
