@@ -25,7 +25,7 @@ function AllPurchases() {
   return (
     <>
     <p className="title">All Purchases</p>
-    <div className="mypurchases">
+    <div className="mypurchases gridcard container">
         <AllPurchase content={purchases} />
       </div>
     </>
