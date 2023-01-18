@@ -1,4 +1,4 @@
-# Greenr App ![GreenR Logo](src/components/Images/headerlogo.png)
+# Greenr App ![Green Logo](src/components/Images/headerlogo.png)
 ## Brief Description
 For a start, here are a list of useful links.
 1. [Front end as deployed on Netlify]()
