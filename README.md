@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+# Greenr App ![GreenR Logo](src/components/Images/headerlogo.png)
+## Brief Description
+For a start, here are a list of useful links.
+1. [Front end as deployed on Netlify]()
+2. [Back end which is deployed on Railway.app]()
+3. [Figma Designs](https://www.figma.com/file/SZEEqh7tZ0w0Y2nN2Ky7hp/greenr?node-id=0%3A3)
+4. [A video recording of how the app works]()
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Greenr is an application whereby the carbon emmitters can purchase carbon credits .The carbon credits allows them to emit a certain percentage of Carbon Dioxide or other green-house gases to the environment.The ultimate goal is to reduce emission of the carbon Dioxide and green-house gases to the environment.
 
-## Available Scripts
 
-In the project directory, you can run:
+| **Username** | **Password** |
+|:------------:|:------------:|
+|  seller1     |   123        |
+|  seller2     |   123        |
+|  buyer1      |   123        |
+|  buyer2      |   123        |
+|  Admin       |   123        |
 
-### `npm start`
+## App Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Sign up
+To sign up, you will be required to enter your user name,email, password, and role. Some of these information are required before the form is submitted in the first place.Onc you have signed up, you will be taken to the home page.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Sign in
+You can sign in with your username and password. Once you sign in, your will be taken to the home page where you can see a list of available carbon credits if you are a buyer or a list of available carbon credits that are yet to be purchased if you are a seller.
 
-### `npm test`
+### Buy Carbon Credits
+You can buy carbon credits when you have an a buyer account. The buyer should have some amount of money for them to purchase  the carbon credits.Once you purchase the carbon credits it will not be availble for sale anymore and will be removed from the sellers page.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Sell Carbon Credits
+A seller can be able to register new carbon credits . Once they have registered the Admin approves it and it is available for the buyers to purchase. The admin verifies the carbon credits then approves it.
 
-### `npm run build`
+### Log out
+Both the buyer and the seller can log out of their accounts .
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Setup Requirments
+Incase you want to run it in your local machine, you will need the following;
+- ruby and rails 
+- sql server
+-   React
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Run the following commands to set up the front end
+1.  `git clone git@github.com:MICHAELMUNAVU83/greenr-frontend.git`
+2.  `cd greenr-frontend.git`
+3.  `npm install`
+4.  `npm start`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To set up the back end, run the following commands
+1.  `git clone git@github.com:MICHAELMUNAVU83/greenr-backend.git`
+2.  `cd greenr-backend`
+3.  `bundle install`
+4.  `rails db:create db:migrate db:seed`
+4.  `rails s`
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
