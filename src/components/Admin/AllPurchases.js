@@ -9,7 +9,7 @@ function AllPurchases() {
   const [purchases, setPurchases] = useState([]);
   
   useEffect(() => {
-    fetch(`http://localhost:3000/api/v1/purchases`, {
+    fetch(`https://greenr-backend.herokuapp.com/api/v1/purchases`, {
       method: "GET",
       headers: {
         Accepts: "application/json",

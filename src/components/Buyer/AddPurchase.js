@@ -12,7 +12,7 @@ function AddPurchase({loggedInUserId}) {
     const navigate= useNavigate();
 
     useEffect(() => {
-      fetch(`http://localhost:3000/api/v1/carbon_credits/${id}`)
+      fetch(`https://greenr-backend.herokuapp.com/api/v1/carbon_credits/${id}`)
         .then((res) => res.json())
         .then((data) => {console.log(id)
           setCarbonToBePurchased(data);
@@ -22,7 +22,7 @@ function AddPurchase({loggedInUserId}) {
 
     function handleSubmit(e) {
       e.preventDefault();
-        fetch("http://localhost:3000/api/v1/purchases",{
+        fetch("https://greenr-backend.herokuapp.com/api/v1/purchases",{
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -11,7 +11,7 @@ const EachCarbonCredit = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    fetch(`http://localhost:3000/api/v1/carbon_credits/${id}`)
+    fetch(`https://greenr-backend.herokuapp.com/api/v1/carbon_credits/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setCarbon(data);

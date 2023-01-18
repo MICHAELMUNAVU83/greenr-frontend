@@ -23,7 +23,7 @@ function App() {
   const [role, setRole] = useState("");
   const [loggedInUserId, setLoggedInUserId] = useState("");
   useEffect(() => {
-    fetch("http://localhost:3000/api/v1/profile ", {
+    fetch("https://greenr-backend.herokuapp.com/api/v1/profile ", {
       method: "GET",
       headers: {
         Accepts: "application/json",

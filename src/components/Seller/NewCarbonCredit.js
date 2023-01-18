@@ -25,7 +25,7 @@ function NewCarbonCredit({ loggedInUserId }) {
 
   const addACarbonCredit = (e) => {
     e.preventDefault();
-    fetch("http://localhost:3000/api/v1/carbon_credits", {
+    fetch("https://greenr-backend.herokuapp.com/api/v1/carbon_credits", {
       method: "POST",
       headers: {
         Accepts: "application/json",

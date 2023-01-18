@@ -4,7 +4,7 @@ import "./PendingCarbonCredit.css";
 
 const PendingCarbons = ({ content }) => {
   const handleClick = (id) => {
-    fetch(`http://localhost:3000/api/v1/carbon_credits/${id}`, {
+    fetch(`https://greenr-backend.herokuapp.com/api/v1/carbon_credits/${id}`, {
       method: "PATCH",
       body: JSON.stringify({ approved: true }),
       headers: {

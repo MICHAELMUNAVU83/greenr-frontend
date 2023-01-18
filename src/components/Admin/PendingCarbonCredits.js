@@ -7,7 +7,7 @@ function PendingCarbonCredits() {
   const [pendingCard, setPendingCard] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/api/v1/carbon_credits", {
+    fetch("https://greenr-backend.herokuapp.com/api/v1/carbon_credits", {
       method: "GET",
       headers: {
         Accepts: "application/json",
