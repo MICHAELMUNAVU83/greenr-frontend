@@ -23,7 +23,7 @@ function MyPurchases({loggedInUserId}) {
   return (
     <>
       <p className="title">Purchased Credits</p>
-      <div className="mypurchases container">
+      <div className="mypurchases container gridcard">
         <MyPurchase content={purchases} />
       </div>
     </>
