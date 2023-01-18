@@ -13,13 +13,12 @@ function MyCarbonCredits({ loggedInUserId }) {
   }, []);
   return <>
      <p className="title">My Carbon Credits</p>
-     <div className="gridcard">
+     <div className="gridcard container">
      {carbonCredits.map((credit)=>(
       <div className="Card1">
-      <img src="https://images.unsplash.com/photo-1503785640985-f62e3aeee448?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1174&q=80" alt="image"/>
-      <p><Link>{credit.source}</Link></p>
-      <p>At a price of ${credit.price}, 10,000 {credit.source} planted on 2 acres of land.</p>
-      <p>Offsetting {credit.amount} of C02</p>
+      <img src= {credit.image} alt="image" style={{marginBottom: '15px'}}/>
+      <p><Link className="carbon-tl">{credit.source}</Link></p>
+      <p style={{height: '100px'}}>At a price of ${credit.price}, {credit.source} offsetting {credit.amount} kgs of C02</p>
       </div>
     ))}
   </div>
