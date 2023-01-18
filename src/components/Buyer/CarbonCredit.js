@@ -11,7 +11,7 @@ function CarbonCredit(props) {
     <>
       {props.content.map(
         (carbons) =>
-          carbons.approved === true && (
+          carbons.approved === true && !carbons.purchase && (
             <div className="Card">
               <img
                 src= {carbons.image}
