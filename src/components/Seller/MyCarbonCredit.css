@@ -10,7 +10,7 @@
 .Card1{
     border: 1px solid grey;
     padding: 3%;
-    max-height: max-content;
+    max-height: fit-content;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

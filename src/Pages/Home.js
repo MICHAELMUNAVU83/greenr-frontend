@@ -2,7 +2,7 @@ import React from "react";
 
 function Home({ setStoredToken }) {
   return (
-    <div className="container" style={{height:'65vh', display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center'}}>
+    <div className="container" style={{height:'83vh', display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center'}}>
       <p style={{textAlign:'center', fontSize:'35px'}}>
       <span style={{FontWeight:'700', display:'block', paddingBottom:'20px'}}>Welcome to Greenr! </span>Thank you for joining us at the forefront of the fight for our planet. You are logged into your account.
       </p>
