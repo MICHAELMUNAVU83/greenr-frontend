@@ -19,11 +19,11 @@ const PendingCarbons = ({ content }) => {
           carbonCredit.approved === false && (
             <div className="Card">
               <img
-                src="https://images.unsplash.com/photo-1503785640985-f62e3aeee448?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1174&q=80"
+                src={carbonCredit.image}
                 alt="image"
               />
               <p className="p1">
-                <Link>{carbonCredit.source}</Link>
+                <Link className="carbon-tl" style={{height:'max-content'}}>{carbonCredit.source}</Link>
               </p>
               <p className="p2">
                 {" "}
@@ -33,7 +33,8 @@ const PendingCarbons = ({ content }) => {
               <p className="p3">Offsetting {carbonCredit.amount} of C02</p>
               <p>
                 <button
-                  className="button"
+                  className="btn carbon-det"
+                  style={{marginTop:'20px'}}
                   onClick={() => {
                     {
                       handleClick(carbonCredit.id);
