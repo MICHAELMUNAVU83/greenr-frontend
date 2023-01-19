@@ -2,9 +2,8 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Login.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { AiOutlineUser } from "react-icons/ai"
-import {BiLockAlt,BiCheckbox} from "react-icons/bi"
-
+import { AiOutlineUser } from "react-icons/ai";
+import { BiLockAlt, BiCheckbox } from "react-icons/bi";
 
 function Login({ setStoredToken }) {
   const [username, setUsername] = useState("");
@@ -45,7 +44,9 @@ function Login({ setStoredToken }) {
     <div className="login-container container">
       <form className="login-form">
         <div className="login-form-content">
-          <p className="login-form-parag">Don't have an account?<a href='signup'>Signup</a></p>
+          <p className="login-form-parag">
+            Don't have an account?<a href="signup">Signup</a>
+          </p>
           <h3 className="login-form-title">Welcome</h3>
           <p className="login-form-paragraph">Login to continue</p>
           <div className="form-group mt-3">
@@ -53,12 +54,12 @@ function Login({ setStoredToken }) {
             <input
               type="email"
               className="form-control mt-1"
-              placeholder= "    Your username"
+              placeholder="    Your username"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
             />
           </div>
-          
+
           <div className="form-group mt-3">
             <label className="login-label">Password</label>
             <input
@@ -76,9 +77,17 @@ function Login({ setStoredToken }) {
             <a href="#" text-decoration> Forgot Password?</a>
           </p> */}
           <div className="d-grid gap-2 mt-3">
-            <button type="submit"
-             className="btn btn-success"
-             onClick={handleSubmit}>
+            <button
+              type="submit"
+              style={{
+                backgroundColor: "#2ECC71",
+                color: "white",
+                border: "none",
+                borderRadius: "5px",
+                padding: "10px 20px",
+              }}
+              onClick={handleSubmit}
+            >
               Login
             </button>
           </div>
