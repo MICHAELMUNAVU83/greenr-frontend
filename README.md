@@ -56,3 +56,40 @@ To set up the back end, run the following commands
 4.  `rails s`
 
 
+
+
+
+## Author1
+👤 **MICHAELMUNAVU83**
+
+- GitHub: [@MICHAELMUNAVU83](https://github.com/MICHAELMUNAVU83)
+
+)
+
+## Author2
+👤 **AFANDIELOMDA**
+
+- GitHub: [@Afandi](https://github.com/AfandiElomda)
+
+)
+
+## Author3
+👤 **MERCYCHERUIYOT**
+
+- GitHub: [@Mercy](https://github.com/Mercy-Cheruiyot)
+)
+
+## Author4
+👤 **JOSEPHMWANGI**
+
+- GitHub: [@Joseph](https://github.com/Realmunene)
+)
+
+## Author5
+👤 **BENAIAHPRAISE**
+
+- GitHub: [@Benaiah](https://github.com/benaiah-ke)
+)
+
+
+
