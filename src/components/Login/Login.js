@@ -2,9 +2,9 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Login.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { AiOutlineUser } from "react-icons/ai"
-import {BiLockAlt,BiCheckbox} from "react-icons/bi"
+import { ToastContainer, toast } from "react-toastify";
 
+import "react-toastify/dist/ReactToastify.css";
 
 function Login({ setStoredToken }) {
   const [username, setUsername] = useState("");
@@ -13,7 +13,7 @@ function Login({ setStoredToken }) {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    fetch("/api/v1/login", {
+    fetch("https://greenr-backend.herokuapp.com/api/v1/login", {
       method: "POST",
       headers: {
         Accepts: "application/json",
@@ -33,7 +33,16 @@ function Login({ setStoredToken }) {
           setStoredToken(data.jwt);
           navigate("/");
         } else {
-          alert("Invalid credentials");
+          toast.error("Invalid credentials", {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+          });
         }
       });
 
@@ -42,27 +51,27 @@ function Login({ setStoredToken }) {
     setPassword("");
   };
   return (
-    <div className="Login-form-container">
-      <form className="Login-form">
-        <div className="Login-form-content">
-          <p className="Login-form-parag">Dont have an account?<a href='signup'>Signup</a></p>
-          <h3 className="Login-form-title">Welcome</h3>
-          <p className="Login-form-paragraph">Login to continue</p>
+    <div className="login-container container">
+      <form className="login-form">
+        <div className="login-form-content">
+          <p className="login-form-parag">
+            Don't have an account?<a href="signup">Signup</a>
+          </p>
+          <h3 className="login-form-title">Welcome</h3>
+          <p className="login-form-paragraph">Login to continue</p>
           <div className="form-group mt-3">
             <label className="login-label">Username </label>
-            <AiOutlineUser className="user"/>
             <input
               type="email"
               className="form-control mt-1"
-              placeholder= "    Your username"
+              placeholder="    Your username"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
             />
           </div>
-          
+
           <div className="form-group mt-3">
             <label className="login-label">Password</label>
-            <BiLockAlt className="lock"/>
             <input
               type="password"
               className="form-control mt-1"
@@ -71,21 +80,25 @@ function Login({ setStoredToken }) {
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-          {/* <p className="remember me text-right mt-2">
-           <BiCheckbox /> Remember me
-          </p>
-          <p className="forgot-password text-right mt-2">
-            <a href="#" text-decoration> Forgot Password?</a>
-          </p> */}
+
           <div className="d-grid gap-2 mt-3">
-            <button type="submit"
-             className="btn btn-success"
-             onClick={handleSubmit}>
+            <button
+              type="submit"
+              style={{
+                backgroundColor: "#80cc28",
+                color: "white",
+                border: "none",
+                borderRadius: "5px",
+                padding: "10px 20px",
+              }}
+              onClick={handleSubmit}
+            >
               Login
             </button>
           </div>
         </div>
       </form>
+      <ToastContainer />
     </div>
   );
 }

@@ -6,7 +6,7 @@ function MyPurchases({loggedInUserId}) {
   const [purchases, setPurchases] = useState([]);
 
   useEffect(() => {
-    fetch(`/api/v1/my_purchases/${loggedInUserId}`, {
+    fetch(`https://greenr-backend.herokuapp.com/api/v1/my_purchases/${loggedInUserId}`, {
       method: "GET",
       headers: {
         Accepts: "application/json",
@@ -18,12 +18,12 @@ function MyPurchases({loggedInUserId}) {
         console.log(data);
         setPurchases(data);
       });
-  }, []);
+  }, [purchases, loggedInUserId]);
 
   return (
     <>
       <p className="title">Purchased Credits</p>
-      <div className="mypurchases">
+      <div className="mypurchases container gridcard">
         <MyPurchase content={purchases} />
       </div>
     </>

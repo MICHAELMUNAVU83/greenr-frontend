@@ -4,11 +4,10 @@
 .signup-form {
   margin: 4% auto;
   width: 40%;
-  padding: 2%;
+  padding: 4%;
   border: 1px solid rgb(209, 207, 207);
-  box-shadow: rgb(0 0 0 / 16%) 1px 1px 10px;
-  border-radius: 8px;
 }
+
 .signup-form1 {
   margin: 4% auto;
   width: 53%;
@@ -18,6 +17,30 @@
 .signup-form1 label{
   padding-top: 3%;
 }
+
+label {
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 3px;
+}
+
+.signup-input, .form-select option {
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+optgroup {
+  font-size: 14px;
+}
+
+.signup-input::placeholder {
+  font-size: 13px;
+}
+
+.form-select {
+  margin-bottom: 30px;
+}
+
 .signup-form1 p{
   padding-bottom: 1%;
   color: green;
@@ -31,11 +54,26 @@ aside {
 }
 aside p {
   color: rgb(209, 207, 207);
-  font-size: 22px;
+  font-size: 14px;
 }
+
+aside a {
+  color: green;
+  font-size: 14px;
+  padding-left: 8px;
+}
+
+aside + h2 {
+  font-weight: 800;
+  font-size: 25px;
+  margin-bottom: 0px;
+}
+
 .signup-p {
-  font-size: 24px;
+  font-size: 12px;
+  margin-bottom: 30px;
 }
+
 .linktag {
   text-decoration: none;
 }

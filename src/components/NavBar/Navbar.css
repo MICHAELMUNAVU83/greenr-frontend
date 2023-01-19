@@ -1,11 +1,39 @@
 .green-active:hover{
-    color:hwb(98 3% 19%);
+    color: #80cc28;
     
   }
-  .green-active{
-    color:black;
-  }
-  /* .nav-item:active{
-    color:#ce5707;
-  } */
+.green-active{
+  color:black;
+}
+/* .nav-item:active{
+  color:#ce5707;
+} */
+
+.navbar-links{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  width: 10%;
+}
+
+.navbar-links button {
+  background-color: #27963C;
+  border-radius: 0px;
+  margin-left: 40px;
+}
+
+.navbar-links button:hover {
+  background-color: #80cc28;
+
+}
+
+.navbar {
+  padding: 20px 50px;
+}
+
+
+  
   

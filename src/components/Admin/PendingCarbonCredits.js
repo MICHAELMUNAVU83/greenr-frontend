@@ -7,7 +7,7 @@ function PendingCarbonCredits() {
   const [pendingCard, setPendingCard] = useState([]);
 
   useEffect(() => {
-    fetch("/api/v1/carbon_credits", {
+    fetch("https://greenr-backend.herokuapp.com/api/v1/carbon_credits", {
       method: "GET",
       headers: {
         Accepts: "application/json",
@@ -19,12 +19,12 @@ function PendingCarbonCredits() {
         console.log(data);
         setPendingCard(data);
       });
-  }, []);
+  }, [pendingCard]);
 
   return (
     <>
       <p className="title">Pending Carbon Projects</p>
-      <div className="gridcard">
+      <div className="gridcard container">
         <PendingCarbons content={pendingCard} />
       </div>  
     </>

@@ -9,7 +9,7 @@ function AllPurchases() {
   const [purchases, setPurchases] = useState([]);
   
   useEffect(() => {
-    fetch(`/api/v1/purchases`, {
+    fetch(`https://greenr-backend.herokuapp.com/api/v1/purchases`, {
       method: "GET",
       headers: {
         Accepts: "application/json",
@@ -25,7 +25,7 @@ function AllPurchases() {
   return (
     <>
     <p className="title">All Purchases</p>
-    <div className="mypurchases">
+    <div className="mypurchases gridcard container">
         <AllPurchase content={purchases} />
       </div>
     </>

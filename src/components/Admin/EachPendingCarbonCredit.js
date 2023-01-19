@@ -11,7 +11,7 @@ const EachPendingCarbonCredit = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    fetch(`/api/v1/carbon_credits/${id}`)
+    fetch(`https://greenr-backend.herokuapp.com/api/v1/carbon_credits/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setCarbon(data);
@@ -21,14 +21,14 @@ const EachPendingCarbonCredit = () => {
   }, []);
 
   return (
-    <div className="carboncreditcard ">
+    <div className="carboncreditcard">
       <p className="victoriaparagraph">
         <IoLocationOutline />
         {carbon.location}
       </p>
       <img
         className="img"
-        src="https://images.unsplash.com/photo-1503785640985-f62e3aeee448?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1174&q=80"
+        src= {carbon.image}
         alt="image"
       />
       <div className="carbondetails">

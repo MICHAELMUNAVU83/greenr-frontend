@@ -12,7 +12,7 @@ function SignUp({ setStoredToken }) {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    fetch("/api/v1/users", {
+    fetch("https://greenr-backend.herokuapp.com/api/v1/users", {
       method: "POST",
       headers: {
         Accepts: "application/json",
@@ -54,7 +54,7 @@ function SignUp({ setStoredToken }) {
         <h2>Welcome</h2>
         <p className="signup-p">Fill in details to create a Greenr Account</p>
         <form>
-          <label>Username:</label>
+          <label>Username</label>
           <input
             type="text"
             className="form-control signup-input"
@@ -63,7 +63,7 @@ function SignUp({ setStoredToken }) {
             onChange={(e) => setUsername(e.target.value)}
             placeholder="Username"
           />
-          <label>Email:</label>
+          <label>Email</label>
           <input
             type="text"
             className="form-control signup-input"
@@ -72,7 +72,7 @@ function SignUp({ setStoredToken }) {
             placeholder="Email"
             onChange={(e) => setEmail(e.target.value)}
           />
-          <label>Password:</label>
+          <label>Password</label>
           <input
             type="text"
             className="form-control signup-input"
@@ -81,15 +81,17 @@ function SignUp({ setStoredToken }) {
             placeholder="Password"
             onChange={(e) => setPassword(e.target.value)}
           />
-          <label>Select a role:</label>
+          <label>Select a role</label>
           <select
             value={role}
             onChange={(e) => setRole(e.target.value)}
             className="form-select"
           >
-            <option value="">Select a role</option>
-            <option value="buyer">Buyer</option>
-            <option value="seller">Seller</option>
+            <optgroup>
+              <option value="">Select a role</option>
+              <option value="buyer">Buyer</option>
+              <option value="seller">Seller</option>
+            </optgroup>
           </select>
 
           <button className="signup-button" onClick={handleSubmit}>

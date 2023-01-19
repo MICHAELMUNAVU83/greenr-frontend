@@ -5,7 +5,7 @@ import "./CarbonStyle.css";
 function CarbonCredits() {
   const [carbonCard, setCarbonCard] = useState([]);
   useEffect(() => {
-    fetch("/api/v1/carbon_credits"
+    fetch("https://greenr-backend.herokuapp.com/api/v1/carbon_credits"
     )
       .then((resp) => resp.json())
       .then((data) => {
@@ -15,7 +15,7 @@ function CarbonCredits() {
   return (
     <>
       <p className="title">Available Carbon Projects</p>
-      <div className="gridcard">
+      <div className="gridcard container">
       <CarbonCredit content={carbonCard} />
       </div>
       
