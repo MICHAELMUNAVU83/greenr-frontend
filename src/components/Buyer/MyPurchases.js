@@ -18,7 +18,7 @@ function MyPurchases({loggedInUserId}) {
         console.log(data);
         setPurchases(data);
       });
-  }, []);
+  }, [purchases, loggedInUserId]);
 
   return (
     <>

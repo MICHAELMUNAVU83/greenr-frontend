@@ -2,8 +2,9 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Login.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { AiOutlineUser } from "react-icons/ai";
-import { BiLockAlt, BiCheckbox } from "react-icons/bi";
+import { ToastContainer, toast } from "react-toastify";
+
+import "react-toastify/dist/ReactToastify.css";
 
 function Login({ setStoredToken }) {
   const [username, setUsername] = useState("");
@@ -32,7 +33,16 @@ function Login({ setStoredToken }) {
           setStoredToken(data.jwt);
           navigate("/");
         } else {
-          alert("Invalid credentials");
+          toast.error("Invalid credentials", {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+          });
         }
       });
 
@@ -70,17 +80,12 @@ function Login({ setStoredToken }) {
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-          {/* <p className="remember me text-right mt-2">
-           <BiCheckbox /> Remember me
-          </p>
-          <p className="forgot-password text-right mt-2">
-            <a href="#" text-decoration> Forgot Password?</a>
-          </p> */}
+
           <div className="d-grid gap-2 mt-3">
             <button
               type="submit"
               style={{
-                backgroundColor: "#2ECC71",
+                backgroundColor: "#80cc28",
                 color: "white",
                 border: "none",
                 borderRadius: "5px",
@@ -93,6 +98,7 @@ function Login({ setStoredToken }) {
           </div>
         </div>
       </form>
+      <ToastContainer />
     </div>
   );
 }

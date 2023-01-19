@@ -18,12 +18,11 @@ const PendingCarbons = ({ content }) => {
         (carbonCredit) =>
           carbonCredit.approved === false && (
             <div className="Card">
-              <img
-                src={carbonCredit.image}
-                alt="image"
-              />
+              <img src={carbonCredit.image} alt={carbonCredit.source} />
               <p className="p1">
-                <Link className="carbon-tl" style={{height:'max-content'}}>{carbonCredit.source}</Link>
+                <Link className="carbon-tl" style={{ height: "max-content" }}>
+                  {carbonCredit.source}
+                </Link>
               </p>
               <p className="p2">
                 {" "}
@@ -34,21 +33,14 @@ const PendingCarbons = ({ content }) => {
               <p>
                 <button
                   className="btn carbon-det"
-                  style={{marginTop:'20px'}}
+                  style={{ marginTop: "20px" }}
                   onClick={() => {
-                    {
-                      handleClick(carbonCredit.id);
-                    }
+                    handleClick(carbonCredit.id);
                   }}
                 >
                   APPROVE
                 </button>
               </p>
-              {/* <Link
-          to={`/eachcarboncredit/${carbonCredit.id}`}
-         >
-         More details
-       </Link> */}
             </div>
           )
       )}

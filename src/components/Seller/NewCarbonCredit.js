@@ -6,6 +6,7 @@ function NewCarbonCredit({ loggedInUserId }) {
   const [amount, setAmount] = useState("");
   const [price, setPrice] = useState("");
   const [source, setSource] = useState("");
+  const [location, setLocation] = useState("");
 
   const navigate = useNavigate();
 
@@ -36,6 +37,7 @@ function NewCarbonCredit({ loggedInUserId }) {
         amount: amount,
         price: price,
         source: source,
+        location: location,
         user_id: loggedInUserId,
       }),
     });
@@ -49,6 +51,14 @@ function NewCarbonCredit({ loggedInUserId }) {
       <p className="title">Add New Carbon Project</p>
       <form className="signup-form1">
         <p>Fill in the details below to add a new carbon project</p>
+        <label>Project Image</label> <br />
+        <input
+          onChange={(e) => {
+            uploadImage(e.target.files);
+          }}
+          type="file"
+          className="form-control signup-input"
+        />
         <label>Source of carbon offset</label>
         <input
           type="text"
@@ -73,22 +83,24 @@ function NewCarbonCredit({ loggedInUserId }) {
         <input
           type="text"
           className="form-control signup-input"
-          placeholder="Amount in kgs of CO2"
+          placeholder="Amount in Us Dollars"
           value={price}
           onChange={(e) => {
             setPrice(e.target.value);
           }}
         />
-        <label>Project Image</label> <br />
+        <label>Location of the project</label>
         <input
-          onChange={(e) => {
-            uploadImage(e.target.files);
-          }}
-          type="file"
+          type="text"
           className="form-control signup-input"
+          placeholder="eg. Nairobi, Kenya"
+          value={location}
+          onChange={(e) => {
+            setLocation(e.target.value);
+          }}
         />
         <button className="signup-button" onClick={addACarbonCredit}>
-          Submit
+          Submit for Approval
         </button>
       </form>
     </div>

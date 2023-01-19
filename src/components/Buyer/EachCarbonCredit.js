@@ -18,11 +18,11 @@ const EachCarbonCredit = () => {
         console.log(data);
         setUsername(data.user.username);
       });
-  }, []);
+  }, [id]);
 
   return (
     <div className="cc-card container">
-      <img className="carbon-img" src= {carbon.image} />
+      <img className="carbon-img" src= {carbon.image} alt={carbon.source} />
       <div className="carbondetails">
         <p className="location">
           <IoLocationOutline className="icon" />
