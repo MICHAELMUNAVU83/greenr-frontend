@@ -1,6 +1,11 @@
 # ![Green Logo](src/components/Images/headerlogo.png)   Greenr App  
 
 
+![Screenshot from 2023-01-19 08-25-15](https://user-images.githubusercontent.com/86654131/213364450-7cacdb0b-368d-400f-9f08-9e1b2c3ca5da.png)
+
+
+
+
 ## Brief Description
 For a start, here are a list of useful links.
 1. [Front end as deployed on Netlify](https://greenr-frontend.netlify.app/)
