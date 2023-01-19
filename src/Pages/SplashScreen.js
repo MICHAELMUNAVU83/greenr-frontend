@@ -6,16 +6,23 @@ import { TiHomeOutline } from "react-icons/ti";
 
 function SplashScreen() {
   return (
-    <div style={{marginBottom: '30px'}}>
+    <div style={{ marginBottom: "30px" }}>
       <section className="bg-grey">
         <div className="d-flex justify-content-around container">
           <div className="text-left m-5">
             <h1 className="text-left">Offset your Carbon Emissions</h1>
-            <p>Greenr makes it easy for you to buy and sell carbon credits, all towards mitigating climate change and saving our planet </p>
+            <p>
+              Greenr makes it easy for you to buy and sell carbon credits, all
+              towards mitigating climate change and saving our planet{" "}
+            </p>
             <Link to="/login">
               <button
                 type="button"
-                style={{ backgroundColor: "#00b300", marginTop:'30px', borderRadius:'0px' }}
+                style={{
+                  backgroundColor: "#00b300",
+                  marginTop: "30px",
+                  borderRadius: "0px",
+                }}
                 className="text-white btn btn-lg border-none"
               >
                 {" "}
@@ -25,7 +32,7 @@ function SplashScreen() {
           </div>
           <div className="col-md-4 m-5 ">
             <img
-              style={{width: "100%"}}
+              style={{ width: "100%" }}
               src="https://api.time.com/wp-content/uploads/2018/05/forest-bathing.jpg?quality=85&w=800"
               alt="frest"
             />
@@ -40,7 +47,7 @@ function SplashScreen() {
             <div className="border border-dark mx-2 p-1">
               <div className="d-flex justify-content-center">
                 <TiHomeOutline
-                style={{marginTop: '25px'}}
+                  style={{ marginTop: "25px" }}
                   className="border border-success rounded-circle p-3"
                   color="green"
                   size={100}
@@ -53,17 +60,15 @@ function SplashScreen() {
                 <p className="card-text p-3">
                   Offset your Carbon emission by purchasing credits
                 </p>
-                <p
-                  className="underline text-decoration-underline"
-                >
-                  <a style={{color:'yellowgreen'}} href="/login">More details</a>
+                <p className="underline text-decoration-underline">
+                  More details
                 </p>
               </div>
             </div>
             <div className="border border-dark mx-2 p-1">
               <div className="d-flex justify-content-center">
                 <FaRegHandshake
-                style={{marginTop: '25px'}}
+                  style={{ marginTop: "25px" }}
                   className="border border-success rounded-circle p-3"
                   color="green"
                   size={100}
@@ -76,17 +81,15 @@ function SplashScreen() {
                 <p className="card-text p-3">
                   Earn from your carbon offset projects by selling credits
                 </p>
-                <p
-                  className="underline text-decoration-underline"
-                >
-                 <a style={{color:'yellowgreen'}} href="/login">More details</a>
+                <p className="underline text-decoration-underline">
+                  More details
                 </p>
               </div>
             </div>
             <div className="border border-dark mx-2 p-1">
               <div className="d-flex justify-content-center">
                 <FaHandHoldingWater
-                style={{marginTop: '25px'}}
+                  style={{ marginTop: "25px" }}
                   className="border border-success rounded-circle p-3"
                   color="green"
                   size={100}
@@ -99,17 +102,14 @@ function SplashScreen() {
                 <p className="card-text p-3">
                   View data on your impact in reducing climate change
                 </p>
-                <p
-                  className="underline text-decoration-underline"
-                >
-                  <a style={{color:'yellowgreen'}} href="/login">More details</a>
+                <p className="underline text-decoration-underline">
+                  More details
                 </p>
               </div>
             </div>
           </div>
         </div>
       </section>
-      
     </div>
   );
 }
