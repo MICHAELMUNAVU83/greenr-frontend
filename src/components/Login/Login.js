@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./Login.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { ToastContainer, toast } from "react-toastify";
@@ -55,7 +56,11 @@ function Login({ setStoredToken }) {
       <form className="login-form">
         <div className="login-form-content">
           <p className="login-form-parag">
-            Don't have an account?<a href="signup">Signup</a>
+            Don't have an account?
+            <Link to="/signup" style={{ color: "#80cc28" }}>
+              {" "}
+              Sign up
+            </Link>
           </p>
           <h3 className="login-form-title">Welcome</h3>
           <p className="login-form-paragraph">Login to continue</p>
