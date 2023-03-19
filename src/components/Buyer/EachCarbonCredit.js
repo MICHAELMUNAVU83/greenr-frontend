@@ -11,7 +11,9 @@ const EachCarbonCredit = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    fetch(`https://greenr-backend.herokuapp.com/api/v1/carbon_credits/${id}`)
+    fetch(
+      `https://greenr-app-backend.herokuapp.com/api/v1/carbon_credits/${id}`
+    )
       .then((res) => res.json())
       .then((data) => {
         setCarbon(data);
@@ -22,7 +24,7 @@ const EachCarbonCredit = () => {
 
   return (
     <div className="cc-card container">
-      <img className="carbon-img" src= {carbon.image} alt={carbon.source} />
+      <img className="carbon-img" src={carbon.image} alt={carbon.source} />
       <div className="carbondetails">
         <p className="location">
           <IoLocationOutline className="icon" />
@@ -32,9 +34,7 @@ const EachCarbonCredit = () => {
           {carbon.source} offsetting {carbon.amount} of CO2
         </h3>
         <p className="cc-seller">By {username}</p>
-        <p className="cc-price">
-          {carbon.price} USD
-        </p>
+        <p className="cc-price">{carbon.price} USD</p>
         <p className="carbonparagraph">
           As trees grow, they take in carbon from the air and store it in wood,
           plant matter, and in the soil, making them what scientists call

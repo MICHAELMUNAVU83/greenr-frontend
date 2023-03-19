@@ -14,7 +14,7 @@ function Login({ setStoredToken }) {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    fetch("https://greenr-backend.herokuapp.com/api/v1/login", {
+    fetch("https://greenr-app-backend.herokuapp.com/api/v1/login", {
       method: "POST",
       headers: {
         Accepts: "application/json",

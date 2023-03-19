@@ -12,7 +12,7 @@ function SignUp({ setStoredToken }) {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    fetch("https://greenr-backend.herokuapp.com/api/v1/users", {
+    fetch("https://greenr-app-backend.herokuapp.com/api/v1/users", {
       method: "POST",
       headers: {
         Accepts: "application/json",

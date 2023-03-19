@@ -2,14 +2,11 @@ import React, { useState, useEffect } from "react";
 import "./AllPurchases.css";
 import AllPurchase from "./AllPurchase";
 
-
-
 function AllPurchases() {
-
   const [purchases, setPurchases] = useState([]);
-  
+
   useEffect(() => {
-    fetch(`https://greenr-backend.herokuapp.com/api/v1/purchases`, {
+    fetch(`https://greenr-app-backend.herokuapp.com/api/v1/purchases`, {
       method: "GET",
       headers: {
         Accepts: "application/json",
@@ -24,13 +21,12 @@ function AllPurchases() {
   }, []);
   return (
     <>
-    <p className="title">All Purchases</p>
-    <div className="mypurchases gridcard container">
+      <p className="title">All Purchases</p>
+      <div className="mypurchases gridcard container">
         <AllPurchase content={purchases} />
       </div>
     </>
   );
 }
 
-
-export default AllPurchases
+export default AllPurchases;

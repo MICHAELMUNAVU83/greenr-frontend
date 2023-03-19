@@ -1,13 +1,12 @@
-import React, { useState, useEffect } from 'react';
-import './PendingCarbonCredit.css';
-import PendingCarbons from './PendingCarbons';
+import React, { useState, useEffect } from "react";
+import "./PendingCarbonCredit.css";
+import PendingCarbons from "./PendingCarbons";
 
 function PendingCarbonCredits() {
-
   const [pendingCard, setPendingCard] = useState([]);
 
   useEffect(() => {
-    fetch("https://greenr-backend.herokuapp.com/api/v1/carbon_credits", {
+    fetch("https://greenr-app-backend.herokuapp.com/api/v1/carbon_credits", {
       method: "GET",
       headers: {
         Accepts: "application/json",
@@ -26,9 +25,9 @@ function PendingCarbonCredits() {
       <p className="title">Pending Carbon Projects</p>
       <div className="gridcard container">
         <PendingCarbons content={pendingCard} />
-      </div>  
+      </div>
     </>
-  )
+  );
 }
-  
+
 export default PendingCarbonCredits;

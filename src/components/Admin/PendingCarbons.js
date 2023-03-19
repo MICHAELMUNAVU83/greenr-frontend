@@ -4,13 +4,16 @@ import "./PendingCarbonCredit.css";
 
 const PendingCarbons = ({ content }) => {
   const handleClick = (id) => {
-    fetch(`https://greenr-backend.herokuapp.com/api/v1/carbon_credits/${id}`, {
-      method: "PATCH",
-      body: JSON.stringify({ approved: true }),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+    fetch(
+      `https://greenr-app-backend.herokuapp.com/api/v1/carbon_credits/${id}`,
+      {
+        method: "PATCH",
+        body: JSON.stringify({ approved: true }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
   };
   return (
     <>

@@ -6,7 +6,7 @@ function MyCarbonCredits({ loggedInUserId }) {
   const [carbonCredits, setCarbonCredits] = useState([]);
   useEffect(() => {
     fetch(
-      `https://greenr-backend.herokuapp.com/api/v1/my_carbon_credits/${loggedInUserId}`
+      `https://greenr-app-backend.herokuapp.com/api/v1/my_carbon_credits/${loggedInUserId}`
     )
       .then((res) => res.json())
       .then((data) => {

@@ -11,7 +11,9 @@ const EachPendingCarbonCredit = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    fetch(`https://greenr-backend.herokuapp.com/api/v1/carbon_credits/${id}`)
+    fetch(
+      `https://greenr-app-backend.herokuapp.com/api/v1/carbon_credits/${id}`
+    )
       .then((res) => res.json())
       .then((data) => {
         setCarbon(data);
@@ -26,11 +28,7 @@ const EachPendingCarbonCredit = () => {
         <IoLocationOutline />
         {carbon.location}
       </p>
-      <img
-        className="img"
-        src= {carbon.image}
-        alt="image"
-      />
+      <img className="img" src={carbon.image} alt="image" />
       <div className="carbondetails">
         <h3 className="h3">
           10,000 trees planted on 2 acres of land. Offsetting 2T of Co2
@@ -46,7 +44,6 @@ const EachPendingCarbonCredit = () => {
           global carbon cycle by soaking up lots of carbon dioxide that would
           otherwise live in the atmosphere.
         </p>
-
       </div>
     </div>
   );
