@@ -8,7 +8,7 @@ const MyPurchase = ({ content }) => {
       {content.map((purchase) => (
         <div className="Card">
           <img
-            src={purchase.carbon_credit.image}
+            src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2560&q=80"
             alt={purchase.carbon_credit.source}
           />
           <p className="p6">{purchase.carbon_credit.source}</p>
